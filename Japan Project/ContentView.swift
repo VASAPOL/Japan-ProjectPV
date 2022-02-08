@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+let Input_String = "0"
+let Type_Input = (Input_String as NSString).integerValue
+
 struct ContentView: View {
+    @State var textx: String = "0"
+    @State var supply = Int(Type_Input)/10
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack{
+            Text("d")
+        }
     }
 }
 
