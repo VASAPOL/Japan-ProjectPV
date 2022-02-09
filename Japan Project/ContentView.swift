@@ -16,6 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack{
+                
                 ZStack(alignment: .leading){
                     Rectangle()
                         .frame(width: 500, height: 250)
