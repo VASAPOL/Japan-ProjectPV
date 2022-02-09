@@ -16,7 +16,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack{
-                
                 ZStack(alignment: .leading){
                     Rectangle()
                         .frame(width: 500, height: 250)
@@ -36,10 +35,14 @@ struct ContentView: View {
                             .padding(.horizontal, 2)
                         PictureView(picname: "Paper_Image", LableDown: "Paper")
                             .padding(.horizontal, 2)
-                        PictureView(picname: "Paper_Image", LableDown: "Paper")
+                        PictureView(picname: "Paper_Image", LableDown: "Game")
                             .padding(.horizontal, 2)
                         Spacer(minLength: 70)
                     }
+                }
+                HStack{
+                    boxView()
+                    boxView()
                 }
                 Spacer()
             }.hiddenNavigationBarStyle()
@@ -47,7 +50,7 @@ struct ContentView: View {
     }
 }
 
-struct PictureView:View{
+struct PictureView: View{
     var picname: String
     var LableDown: String
     var body: some View{
@@ -76,6 +79,18 @@ struct PictureView:View{
     }
 }
 
+struct boxView: View{
+    var body: some View{
+        VStack{
+            RoundedRectangle(cornerRadius: 20)
+                .padding(.horizontal, 5)
+                .foregroundColor(.black)
+                .frame(height: 200)
+                .ignoresSafeArea()
+            Spacer()
+        }
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
