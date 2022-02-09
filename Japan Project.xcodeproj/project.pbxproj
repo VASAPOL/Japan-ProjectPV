@@ -14,6 +14,7 @@
 		73029F7127B2BACB000D379E /* Japan_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F7027B2BACB000D379E /* Japan_ProjectTests.swift */; };
 		73029F7B27B2BACB000D379E /* Japan_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F7A27B2BACB000D379E /* Japan_ProjectUITests.swift */; };
 		73029F7D27B2BACB000D379E /* Japan_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F7C27B2BACB000D379E /* Japan_ProjectUITestsLaunchTests.swift */; };
+		73029F8B27B37B33000D379E /* View_Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F8A27B37B33000D379E /* View_Modifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		73029F7A27B2BACB000D379E /* Japan_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Japan_ProjectUITests.swift; sourceTree = "<group>"; };
 		73029F7C27B2BACB000D379E /* Japan_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Japan_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		73029F8927B2BC1C000D379E /* Japan Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Japan Project.entitlements"; sourceTree = "<group>"; };
+		73029F8A27B37B33000D379E /* View_Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Modifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				73029F8927B2BC1C000D379E /* Japan Project.entitlements */,
 				73029F5F27B2BACA000D379E /* Japan_ProjectApp.swift */,
 				73029F6127B2BACA000D379E /* ContentView.swift */,
+				73029F8A27B37B33000D379E /* View_Modifier.swift */,
 				73029F6327B2BACB000D379E /* Assets.xcassets */,
 				73029F6527B2BACB000D379E /* Preview Content */,
 			);
@@ -261,6 +264,7 @@
 			files = (
 				73029F6227B2BACA000D379E /* ContentView.swift in Sources */,
 				73029F6027B2BACA000D379E /* Japan_ProjectApp.swift in Sources */,
+				73029F8B27B37B33000D379E /* View_Modifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
