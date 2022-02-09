@@ -1,0 +1,23 @@
+
+[
+    {
+        "id": 1,
+        "name": "Paper", //ชื่อของขยะ
+        "Picture_Name": "Paper_Pic", //ลงท้ายด้วย _Pic
+        "Trash_Color": "Green" //ถังขยะสี
+    },
+    {
+        "id": 2,
+        "name": "Toto", //ชื่อของขยะ
+        "Picture_Name": "Toto", //ลงท้ายด้วย _Pic
+        "Trash_Color": "Red" //ถังขยะสี
+    },
+    {
+        "id": 3,
+        "name": "Toto", //ชื่อของขยะ
+        "Picture_Name": "Toto", //ลงท้ายด้วย _Pic
+        "Trash_Color": "Red" //ถังขยะสี
+    },
+]
+
+

@@ -15,6 +15,7 @@
 		73029F7B27B2BACB000D379E /* Japan_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F7A27B2BACB000D379E /* Japan_ProjectUITests.swift */; };
 		73029F7D27B2BACB000D379E /* Japan_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F7C27B2BACB000D379E /* Japan_ProjectUITestsLaunchTests.swift */; };
 		73029F8B27B37B33000D379E /* View_Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F8A27B37B33000D379E /* View_Modifier.swift */; };
+		7378464B27B41C68005A1997 /* Data_Matcher.json in Resources */ = {isa = PBXBuildFile; fileRef = 7378464427B40040005A1997 /* Data_Matcher.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		73029F5C27B2BACA000D379E /* Japan Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Japan Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73029F5C27B2BACA000D379E /* RISE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RISE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73029F5F27B2BACA000D379E /* Japan_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Japan_ProjectApp.swift; sourceTree = "<group>"; };
 		73029F6127B2BACA000D379E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73029F6327B2BACB000D379E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		73029F7C27B2BACB000D379E /* Japan_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Japan_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		73029F8927B2BC1C000D379E /* Japan Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Japan Project.entitlements"; sourceTree = "<group>"; };
 		73029F8A27B37B33000D379E /* View_Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Modifier.swift; sourceTree = "<group>"; };
+		7378464427B40040005A1997 /* Data_Matcher.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data_Matcher.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,7 @@
 		73029F5D27B2BACA000D379E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73029F5C27B2BACA000D379E /* Japan Project.app */,
+				73029F5C27B2BACA000D379E /* RISE.app */,
 				73029F6C27B2BACB000D379E /* Japan ProjectTests.xctest */,
 				73029F7627B2BACB000D379E /* Japan ProjectUITests.xctest */,
 			);
@@ -102,6 +104,7 @@
 				73029F6127B2BACA000D379E /* ContentView.swift */,
 				73029F8A27B37B33000D379E /* View_Modifier.swift */,
 				73029F6327B2BACB000D379E /* Assets.xcassets */,
+				7378464527B4169F005A1997 /* Resource */,
 				73029F6527B2BACB000D379E /* Preview Content */,
 			);
 			path = "Japan Project";
@@ -132,6 +135,14 @@
 			path = "Japan ProjectUITests";
 			sourceTree = "<group>";
 		};
+		7378464527B4169F005A1997 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				7378464427B40040005A1997 /* Data_Matcher.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,7 +160,7 @@
 			);
 			name = "Japan Project";
 			productName = "Japan Project";
-			productReference = 73029F5C27B2BACA000D379E /* Japan Project.app */;
+			productReference = 73029F5C27B2BACA000D379E /* RISE.app */;
 			productType = "com.apple.product-type.application";
 		};
 		73029F6B27B2BACB000D379E /* Japan ProjectTests */ = {
@@ -236,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7378464B27B41C68005A1997 /* Data_Matcher.json in Resources */,
 				73029F6727B2BACB000D379E /* Preview Assets.xcassets in Resources */,
 				73029F6427B2BACB000D379E /* Assets.xcassets in Resources */,
 			);
@@ -441,7 +453,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vasapol.Japan-Project";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RISE;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -473,7 +485,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vasapol.Japan-Project";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RISE;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
