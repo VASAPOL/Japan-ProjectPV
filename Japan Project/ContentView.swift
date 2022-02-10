@@ -35,8 +35,8 @@ struct ContentView: View {
                             .padding(.horizontal, 2)
                         PictureView(picname: "Paper_Image", LableDown: "Paper")
                             .padding(.horizontal, 2)
-                        PictureView(picname: "Paper_Image", LableDown: "Game")
-                            .padding(.horizontal, 2)
+                        //PictureView(picname: "Paper_Image", LableDown: "Game")
+                        //    .padding(.horizontal, 2)
                         Spacer(minLength: 70)
                     }
                 }
@@ -95,5 +95,6 @@ struct boxView: View{
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 13")
     }
 }

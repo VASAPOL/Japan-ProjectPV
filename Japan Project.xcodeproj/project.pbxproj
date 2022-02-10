@@ -16,6 +16,8 @@
 		73029F7D27B2BACB000D379E /* Japan_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F7C27B2BACB000D379E /* Japan_ProjectUITestsLaunchTests.swift */; };
 		73029F8B27B37B33000D379E /* View_Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F8A27B37B33000D379E /* View_Modifier.swift */; };
 		7378464B27B41C68005A1997 /* Data_Matcher.json in Resources */ = {isa = PBXBuildFile; fileRef = 7378464427B40040005A1997 /* Data_Matcher.json */; };
+		7378465027B4AB82005A1997 /* Trash Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7378464F27B4AB81005A1997 /* Trash Type.swift */; };
+		7378465327B4ABD4005A1997 /* TrashUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7378465227B4ABD4005A1997 /* TrashUi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		73029F8927B2BC1C000D379E /* Japan Project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Japan Project.entitlements"; sourceTree = "<group>"; };
 		73029F8A27B37B33000D379E /* View_Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Modifier.swift; sourceTree = "<group>"; };
 		7378464427B40040005A1997 /* Data_Matcher.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data_Matcher.json; sourceTree = "<group>"; };
+		7378464F27B4AB81005A1997 /* Trash Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trash Type.swift"; sourceTree = "<group>"; };
+		7378465227B4ABD4005A1997 /* TrashUi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashUi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +107,8 @@
 				73029F5F27B2BACA000D379E /* Japan_ProjectApp.swift */,
 				73029F6127B2BACA000D379E /* ContentView.swift */,
 				73029F8A27B37B33000D379E /* View_Modifier.swift */,
+				7378465127B4AB8B005A1997 /* Game */,
 				73029F6327B2BACB000D379E /* Assets.xcassets */,
-				7378464527B4169F005A1997 /* Resource */,
 				73029F6527B2BACB000D379E /* Preview Content */,
 			);
 			path = "Japan Project";
@@ -141,6 +145,16 @@
 				7378464427B40040005A1997 /* Data_Matcher.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		7378465127B4AB8B005A1997 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				7378464F27B4AB81005A1997 /* Trash Type.swift */,
+				7378465227B4ABD4005A1997 /* TrashUi.swift */,
+				7378464527B4169F005A1997 /* Resource */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				73029F6227B2BACA000D379E /* ContentView.swift in Sources */,
+				7378465327B4ABD4005A1997 /* TrashUi.swift in Sources */,
 				73029F6027B2BACA000D379E /* Japan_ProjectApp.swift in Sources */,
 				73029F8B27B37B33000D379E /* View_Modifier.swift in Sources */,
+				7378465027B4AB82005A1997 /* Trash Type.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
