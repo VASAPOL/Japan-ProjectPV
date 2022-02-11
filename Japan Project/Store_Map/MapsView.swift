@@ -36,7 +36,7 @@ struct MapsView: View {
                 Store_Name: "dsda4sgrehe",
                 Store_Image: "A0_Image",
                 Store_Detail: "A0_Image",
-                Street_View_Link: "https://www.google.com/maps/@13.7182898,100.4778825,3a,75y,354.12h,90t/data=!3m6!1e1!3m4!1s_fhP1Hf-wYATCCHiA2vLJQ!2e0!7i16384!8i8192"
+                Street_View_Link: "No_Street_View"
             ),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
@@ -56,7 +56,7 @@ struct MapsView: View {
                 Store_Image: "A2_Image",
                 Store_Detail: "A0_Image",
                 Street_View_Link: "A0_Image")
-    ]
+    ] //No_Street_View
         var body: some View {
             NavigationView{
             VStack {

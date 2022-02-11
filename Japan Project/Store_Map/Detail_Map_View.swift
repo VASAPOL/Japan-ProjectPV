@@ -23,6 +23,8 @@ struct popUP_Detail: View {
             ScrollView(.horizontal){
                 HStack{
                     Image(StoreImage_Internal)
+                        .resizable()
+                        .frame(width: 300, height: 200)
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 150, height: 150)
@@ -40,7 +42,13 @@ struct popUP_Detail: View {
             }.sheet(isPresented: $showWebView) {
                 HStack{
                     ZStack{
-                        WebView(url: URL(string: StoreURL_Street_View_Pub)!)
+                        if (StoreURL_Street_View_Pub == "No_Street_View"){
+                            Text("Street View is Unavalible")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                        }else{
+                            WebView(url: URL(string: StoreURL_Street_View_Pub)!)
+                        }
                         VStack{
                             Rectangle()
                                 .frame(width: 500, height: 50)
