@@ -10,33 +10,10 @@ import SwiftUI
 import MapKit
 import PartialSheet
 
-struct popUP_Detail: View{
-    let StoreName_Internal: String
-    let StoreImage_Internal: String
-    var body: some View{
-        HStack(alignment: .center) {
-            Spacer()
-            Text(StoreName_Internal)
-                .font(.title)
-                .padding()
-            Spacer()
-        }
-        ScrollView(.horizontal){
-            GeometryReader { geo in
-            }
-            Image(StoreImage_Internal)
-        }
-        Divider()
-        Spacer()
-        Text("Something to show in this sheet")
-        Text("Whatever you want.")
-        Spacer()
-    }
-}
-
 var StoreName_Pub = ""
 var StoreImage_Pub = ""
 var StoreDetail_Pub = ""
+var StoreURL_Street_View_Pub = ""
 
 
 struct MapsView: View {
@@ -53,12 +30,13 @@ struct MapsView: View {
     let annotationItems = [
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
-                latitude: 45.872,
-                longitude: -1.248),
+                latitude: 13.6383422,
+                longitude: 100.4384458),
                 color: .yellow,
                 Store_Name: "dsda4sgrehe",
                 Store_Image: "A0_Image",
-                Store_Detail: "A0_Image"
+                Store_Detail: "A0_Image",
+                Street_View_Link: "https://www.google.com/maps/@13.7182898,100.4778825,3a,75y,354.12h,90t/data=!3m6!1e1!3m4!1s_fhP1Hf-wYATCCHiA2vLJQ!2e0!7i16384!8i8192"
             ),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
@@ -67,7 +45,8 @@ struct MapsView: View {
                 color: .yellow,
                 Store_Name: "ds",
                 Store_Image: "A1_Image",
-                Store_Detail: "A0_Image"),
+                Store_Detail: "A0_Image",
+                Street_View_Link: "A0_Image"),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
                 latitude: 45.915737,
@@ -75,9 +54,11 @@ struct MapsView: View {
                 color: .blue,
                 Store_Name: "ds",
                 Store_Image: "A2_Image",
-                Store_Detail: "A0_Image")
+                Store_Detail: "A0_Image",
+                Street_View_Link: "A0_Image")
     ]
         var body: some View {
+            NavigationView{
             VStack {
                 Map(coordinateRegion: $region,
                         interactionModes: .all,
@@ -91,6 +72,7 @@ struct MapsView: View {
                                 StoreName_Pub = item.Store_Name!
                                 StoreImage_Pub = item.Store_Image!
                                 StoreDetail_Pub = item.Store_Detail!
+                                StoreURL_Street_View_Pub = item.Street_View_Link!
                             }){
                                 HStack{
                                     ZStack{
@@ -113,9 +95,10 @@ struct MapsView: View {
                                 }
                             }
                         }
-                    }
+                }.ignoresSafeArea()
             }.halfSheet(isPresented: self.$showHalfSheet) {
                 SheetContents()
+            }
             }
         }
     }
@@ -146,6 +129,7 @@ struct MyAnnotationItem: Identifiable {
     let Store_Name: String?
     let Store_Image: String?
     let Store_Detail: String?
+    let Street_View_Link: String?
     var tint: Color { color ?? .red }
     let id = UUID()
 }
