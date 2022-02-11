@@ -83,7 +83,7 @@ struct MapsView: View {
                 Store_Name: "ร้านสุวรรณ์สาขา 2 รับซื้อของเก่า",
                 Store_Image: "A4_Image",
                 Store_Detail: "เปิดทุกวัน เวลา 08:00-18:00 น.",
-                Street_View_Link: "https://www.google.com/maps/place/%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C+%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99/@13.6462721,100.4489464,3a,75y,233.26h,88.53t/data=!3m6!1e1!3m4!1s9hNIZMQl60mnW3Ael_ZQTw!2e0!7i16384!8i8192!4m11!1m2!2m1!1z4Lin4LiH4Lip4LmM4Lie4Liy4LiT4Li04LiK4Lii4LmMX-C4muC4suC4h-C4guC4uOC4meC5gOC4l-C4teC4ouC4mQ!3m7!1s0x30e2a3282582afa9:0x1142bfaf2216c42d!8m2!3d13.6461873!4d100.4488193!14m1!1BCgIgARICCAI!15sCkPguKfguIfguKnguYzguJ7guLLguJPguLTguIrguKLguYxf4Lia4Liy4LiH4LiC4Li44LiZ4LmA4LiX4Li14Lii4LiZWkgiRuC4p-C4h-C4qeC5jCDguJ7guLLguJPguLTguIrguKLguYwgXyDguJrguLLguIfguILguLjguJnguYDguJfguLXguKLguJmSAQ1zdXJwbHVzX3N0b3Jl"),
+                Street_View_Link: "No_Street_View"),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
                 latitude: 13.6713225,
@@ -92,7 +92,7 @@ struct MapsView: View {
                 Store_Name: "บริษัท เจี่ยฮวดเส็งจั่น จำกัด",
                 Store_Image: "A6_Image",
                 Store_Detail: "เปิดทุกวัน เวลา 08:00-18:00 น.",
-                Street_View_Link: "https://www.google.com/maps/place/%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C+%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99/@13.6462721,100.4489464,3a,75y,233.26h,88.53t/data=!3m6!1e1!3m4!1s9hNIZMQl60mnW3Ael_ZQTw!2e0!7i16384!8i8192!4m11!1m2!2m1!1z4Lin4LiH4Lip4LmM4Lie4Liy4LiT4Li04LiK4Lii4LmMX-C4muC4suC4h-C4guC4uOC4meC5gOC4l-C4teC4ouC4mQ!3m7!1s0x30e2a3282582afa9:0x1142bfaf2216c42d!8m2!3d13.6461873!4d100.4488193!14m1!1BCgIgARICCAI!15sCkPguKfguIfguKnguYzguJ7guLLguJPguLTguIrguKLguYxf4Lia4Liy4LiH4LiC4Li44LiZ4LmA4LiX4Li14Lii4LiZWkgiRuC4p-C4h-C4qeC5jCDguJ7guLLguJPguLTguIrguKLguYwgXyDguJrguLLguIfguILguLjguJnguYDguJfguLXguKLguJmSAQ1zdXJwbHVzX3N0b3Jl"),
+                Street_View_Link: "No_Street_View"),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
                 latitude: 13.6392002,
@@ -101,7 +101,7 @@ struct MapsView: View {
                 Store_Name: "นิวรา ค้าของเก่า",
                 Store_Image: "A7_Image",
                 Store_Detail: "เปิดทุกวัน เวลา 08:00-18:00 น.",
-                Street_View_Link: "https://www.google.com/maps/place/%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C+%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99/@13.6462721,100.4489464,3a,75y,233.26h,88.53t/data=!3m6!1e1!3m4!1s9hNIZMQl60mnW3Ael_ZQTw!2e0!7i16384!8i8192!4m11!1m2!2m1!1z4Lin4LiH4Lip4LmM4Lie4Liy4LiT4Li04LiK4Lii4LmMX-C4muC4suC4h-C4guC4uOC4meC5gOC4l-C4teC4ouC4mQ!3m7!1s0x30e2a3282582afa9:0x1142bfaf2216c42d!8m2!3d13.6461873!4d100.4488193!14m1!1BCgIgARICCAI!15sCkPguKfguIfguKnguYzguJ7guLLguJPguLTguIrguKLguYxf4Lia4Liy4LiH4LiC4Li44LiZ4LmA4LiX4Li14Lii4LiZWkgiRuC4p-C4h-C4qeC5jCDguJ7guLLguJPguLTguIrguKLguYwgXyDguJrguLLguIfguILguLjguJnguYDguJfguLXguKLguJmSAQ1zdXJwbHVzX3N0b3Jl"),
+                Street_View_Link: "https://www.google.com/maps/@13.6391299,100.4167494,3a,75y,301.61h,86.22t/data=!3m7!1e1!3m5!1sbAzYcPdVx9nJAElj4ELcyA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DbAzYcPdVx9nJAElj4ELcyA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D314.16257%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192"),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
                 latitude: 13.6504381,
@@ -110,7 +110,7 @@ struct MapsView: View {
                 Store_Name: "ร้านเอส รับซื้อของเก่ารีไซเคิล",
                 Store_Image: "A8_Image",
                 Store_Detail: "เปิดทุกวัน เวลา 08:00-18:00 น.",
-                Street_View_Link: "https://www.google.com/maps/place/%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C+%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99/@13.6462721,100.4489464,3a,75y,233.26h,88.53t/data=!3m6!1e1!3m4!1s9hNIZMQl60mnW3Ael_ZQTw!2e0!7i16384!8i8192!4m11!1m2!2m1!1z4Lin4LiH4Lip4LmM4Lie4Liy4LiT4Li04LiK4Lii4LmMX-C4muC4suC4h-C4guC4uOC4meC5gOC4l-C4teC4ouC4mQ!3m7!1s0x30e2a3282582afa9:0x1142bfaf2216c42d!8m2!3d13.6461873!4d100.4488193!14m1!1BCgIgARICCAI!15sCkPguKfguIfguKnguYzguJ7guLLguJPguLTguIrguKLguYxf4Lia4Liy4LiH4LiC4Li44LiZ4LmA4LiX4Li14Lii4LiZWkgiRuC4p-C4h-C4qeC5jCDguJ7guLLguJPguLTguIrguKLguYwgXyDguJrguLLguIfguILguLjguJnguYDguJfguLXguKLguJmSAQ1zdXJwbHVzX3N0b3Jl"),
+                Street_View_Link: "https://www.google.com/maps/@13.6507132,100.4498839,3a,75y,209.6h,89.7t/data=!3m6!1e1!3m4!1sZnqGs7zba8HGQnWVHeb_Aw!2e0!7i16384!8i8192"),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
                 latitude: 13.6075998,
@@ -119,7 +119,7 @@ struct MapsView: View {
                 Store_Name: "วงษ์พาณิชย์ เทียนทะเล 26",
                 Store_Image: "A9_Image",
                 Store_Detail: "เปิดทุกวัน เวลา 08:00-18:00 น.",
-                Street_View_Link: "https://www.google.com/maps/place/%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C+%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99/@13.6462721,100.4489464,3a,75y,233.26h,88.53t/data=!3m6!1e1!3m4!1s9hNIZMQl60mnW3Ael_ZQTw!2e0!7i16384!8i8192!4m11!1m2!2m1!1z4Lin4LiH4Lip4LmM4Lie4Liy4LiT4Li04LiK4Lii4LmMX-C4muC4suC4h-C4guC4uOC4meC5gOC4l-C4teC4ouC4mQ!3m7!1s0x30e2a3282582afa9:0x1142bfaf2216c42d!8m2!3d13.6461873!4d100.4488193!14m1!1BCgIgARICCAI!15sCkPguKfguIfguKnguYzguJ7guLLguJPguLTguIrguKLguYxf4Lia4Liy4LiH4LiC4Li44LiZ4LmA4LiX4Li14Lii4LiZWkgiRuC4p-C4h-C4qeC5jCDguJ7guLLguJPguLTguIrguKLguYwgXyDguJrguLLguIfguILguLjguJnguYDguJfguLXguKLguJmSAQ1zdXJwbHVzX3N0b3Jl"),
+                Street_View_Link: "https://www.google.com/maps/@13.6077033,100.4268017,3a,75y,221.84h,90t/data=!3m7!1e1!3m5!1smWNGhlPjif_WQZkdZeOybQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DmWNGhlPjif_WQZkdZeOybQ%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D221.02643%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192"),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
                 latitude: 13.6279269,
@@ -128,7 +128,7 @@ struct MapsView: View {
                 Store_Name: "ทรัพย์ศรีภารับซื้อโลหะ",
                 Store_Image: "A10_Image",
                 Store_Detail: "เปิดทุกวัน เวลา 08:00-18:00 น.",
-                Street_View_Link: "https://www.google.com/maps/place/%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C+%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99/@13.6462721,100.4489464,3a,75y,233.26h,88.53t/data=!3m6!1e1!3m4!1s9hNIZMQl60mnW3Ael_ZQTw!2e0!7i16384!8i8192!4m11!1m2!2m1!1z4Lin4LiH4Lip4LmM4Lie4Liy4LiT4Li04LiK4Lii4LmMX-C4muC4suC4h-C4guC4uOC4meC5gOC4l-C4teC4ouC4mQ!3m7!1s0x30e2a3282582afa9:0x1142bfaf2216c42d!8m2!3d13.6461873!4d100.4488193!14m1!1BCgIgARICCAI!15sCkPguKfguIfguKnguYzguJ7guLLguJPguLTguIrguKLguYxf4Lia4Liy4LiH4LiC4Li44LiZ4LmA4LiX4Li14Lii4LiZWkgiRuC4p-C4h-C4qeC5jCDguJ7guLLguJPguLTguIrguKLguYwgXyDguJrguLLguIfguILguLjguJnguYDguJfguLXguKLguJmSAQ1zdXJwbHVzX3N0b3Jl"),
+                Street_View_Link: "https://www.google.com/maps/place/วงษ์พาณิชย์+เทียนทะเล26/@13.6076194,100.4244993,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2bca675e9407b:0x9b528e29112a121c!8m2!3d13.6076194!4d100.426688"),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
                 latitude: 13.6286959,
