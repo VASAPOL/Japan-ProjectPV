@@ -19,6 +19,7 @@
 		73029F8B27B37B33000D379E /* View_Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73029F8A27B37B33000D379E /* View_Modifier.swift */; };
 		736B3AB527B64AF400DBEAEF /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736B3AB427B64AF400DBEAEF /* MapsView.swift */; };
 		7378464B27B41C68005A1997 /* Data_Matcher.json in Resources */ = {isa = PBXBuildFile; fileRef = 7378464427B40040005A1997 /* Data_Matcher.json */; };
+		738DC70427B65849003B1F6F /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 738DC70327B65849003B1F6F /* PartialSheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				738DC70427B65849003B1F6F /* PartialSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +186,9 @@
 			dependencies = (
 			);
 			name = "Japan Project";
+			packageProductDependencies = (
+				738DC70327B65849003B1F6F /* PartialSheet */,
+			);
 			productName = "Japan Project";
 			productReference = 73029F5C27B2BACA000D379E /* RISE.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +261,9 @@
 				Base,
 			);
 			mainGroup = 73029F5327B2BACA000D379E;
+			packageReferences = (
+				738DC70227B65849003B1F6F /* XCRemoteSwiftPackageReference "PartialSheet" */,
+			);
 			productRefGroup = 73029F5D27B2BACA000D379E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -637,6 +645,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		738DC70227B65849003B1F6F /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		738DC70327B65849003B1F6F /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 738DC70227B65849003B1F6F /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73029F5427B2BACA000D379E /* Project object */;
 }
