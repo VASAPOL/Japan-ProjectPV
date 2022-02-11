@@ -33,30 +33,48 @@ struct MapsView: View {
                 latitude: 13.6383422,
                 longitude: 100.4384458),
                 color: .yellow,
-                Store_Name: "dsda4sgrehe",
+                Store_Name: "อาร์บีอาร์ วงษ์พาณิชย์ สาขาเทียนทะเล 7",
                 Store_Image: "A0_Image",
-                Store_Detail: "A0_Image",
+                Store_Detail: "เปิดทำการตั้งแต่ 08:00-18:00 น. และปิดร้านทุกวันพฤหัสบดี รับซื้อของเก่าเพื่อนำไปรีไซเคิล",
                 Street_View_Link: "No_Street_View"
             ),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
-                latitude: 45.8827419,
-                longitude: -1.1932383),
+                latitude: 13.6351138,
+                longitude: 100.3890108),
                 color: .yellow,
-                Store_Name: "ds",
+                Store_Name: "ร้านสายฝนรับซื้อของเก่า สะแกงาม 26",
                 Store_Image: "A1_Image",
-                Store_Detail: "A0_Image",
-                Street_View_Link: "A0_Image"),
+                Store_Detail: "เปิดทำการตั้งแต่ 07:00-17:00 น. และปิดร้านทุกวันจันทร์",
+                Street_View_Link: "https://www.google.com/maps/@13.6319002,100.4170354,3a,75y,6.13h,77.58t/data=!3m6!1e1!3m4!1sUtuxgCYNwI3BTRqYXhgZLA!2e0!7i16384!8i8192"),
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(
                 latitude: 45.915737,
-                longitude: -1.3300991),
+                longitude: 100.4130009),
                 color: .blue,
-                Store_Name: "ds",
+                Store_Name: "วิชัย",
                 Store_Image: "A2_Image",
                 Store_Detail: "A0_Image",
-                Street_View_Link: "A0_Image"),
-        
+                Street_View_Link: "https://www.google.com/maps/@13.6629327,100.4548174,3a,75y,297.01h,82.84t/data=!3m6!1e1!3m4!1sfv6QKuFVsnLa5V4wNWC2Hg!2e0!7i16384!8i8192"),
+        MyAnnotationItem(
+            coordinate: CLLocationCoordinate2D(
+                latitude: 100.3890106,
+                longitude:13.6487522),
+                color: .yellow,
+                Store_Name: "วงษ์พาณิชย์ บางขุนเทียน",
+                Store_Image: "A3_Image",
+                Store_Detail: "เปิดทุกวัน เวลา 08:00-18:00 น.",
+                Street_View_Link: "https://www.google.com/maps/place/%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C+%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99/@13.6462721,100.4489464,3a,75y,233.26h,88.53t/data=!3m6!1e1!3m4!1s9hNIZMQl60mnW3Ael_ZQTw!2e0!7i16384!8i8192!4m11!1m2!2m1!1z4Lin4LiH4Lip4LmM4Lie4Liy4LiT4Li04LiK4Lii4LmMX-C4muC4suC4h-C4guC4uOC4meC5gOC4l-C4teC4ouC4mQ!3m7!1s0x30e2a3282582afa9:0x1142bfaf2216c42d!8m2!3d13.6461873!4d100.4488193!14m1!1BCgIgARICCAI!15sCkPguKfguIfguKnguYzguJ7guLLguJPguLTguIrguKLguYxf4Lia4Liy4LiH4LiC4Li44LiZ4LmA4LiX4Li14Lii4LiZWkgiRuC4p-C4h-C4qeC5jCDguJ7guLLguJPguLTguIrguKLguYwgXyDguJrguLLguIfguILguLjguJnguYDguJfguLXguKLguJmSAQ1zdXJwbHVzX3N0b3Jl"),
+        MyAnnotationItem(
+            coordinate: CLLocationCoordinate2D(
+                latitude: 100.3890106,
+                longitude:13.6487522),
+                color: .yellow,
+                Store_Name: "วงษ์พาณิชย์ บางขุนเทียน",
+                Store_Image: "A3_Image",
+                Store_Detail: "เปิดทุกวัน เวลา 08:00-18:00 น.",
+                Street_View_Link: "https://www.google.com/maps/place/%E0%B8%A7%E0%B8%87%E0%B8%A9%E0%B9%8C%E0%B8%9E%E0%B8%B2%E0%B8%93%E0%B8%B4%E0%B8%8A%E0%B8%A2%E0%B9%8C+%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99/@13.6462721,100.4489464,3a,75y,233.26h,88.53t/data=!3m6!1e1!3m4!1s9hNIZMQl60mnW3Ael_ZQTw!2e0!7i16384!8i8192!4m11!1m2!2m1!1z4Lin4LiH4Lip4LmM4Lie4Liy4LiT4Li04LiK4Lii4LmMX-C4muC4suC4h-C4guC4uOC4meC5gOC4l-C4teC4ouC4mQ!3m7!1s0x30e2a3282582afa9:0x1142bfaf2216c42d!8m2!3d13.6461873!4d100.4488193!14m1!1BCgIgARICCAI!15sCkPguKfguIfguKnguYzguJ7guLLguJPguLTguIrguKLguYxf4Lia4Liy4LiH4LiC4Li44LiZ4LmA4LiX4Li14Lii4LiZWkgiRuC4p-C4h-C4qeC5jCDguJ7guLLguJPguLTguIrguKLguYwgXyDguJrguLLguIfguILguLjguJnguYDguJfguLXguKLguJmSAQ1zdXJwbHVzX3N0b3Jl"),
+       
     ] //No_Street_View
         var body: some View {
             NavigationView{
