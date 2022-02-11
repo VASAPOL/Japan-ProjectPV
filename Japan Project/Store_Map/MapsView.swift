@@ -55,7 +55,8 @@ struct MapsView: View {
                 Store_Name: "ds",
                 Store_Image: "A2_Image",
                 Store_Detail: "A0_Image",
-                Street_View_Link: "A0_Image")
+                Street_View_Link: "A0_Image"),
+        
     ] //No_Street_View
         var body: some View {
             NavigationView{

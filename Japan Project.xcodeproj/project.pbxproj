@@ -23,7 +23,6 @@
 		738DC70627B6663B003B1F6F /* PartialSheetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DC70527B6663A003B1F6F /* PartialSheetViews.swift */; };
 		738DC70827B675D1003B1F6F /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DC70727B675D1003B1F6F /* WebView.swift */; };
 		738DC70A27B68F9D003B1F6F /* Detail_Map_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DC70927B68F9D003B1F6F /* Detail_Map_View.swift */; };
-		738DC70C27B6988A003B1F6F /* WebView_For_URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DC70B27B6988A003B1F6F /* WebView_For_URL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +62,6 @@
 		738DC70527B6663A003B1F6F /* PartialSheetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialSheetViews.swift; sourceTree = "<group>"; };
 		738DC70727B675D1003B1F6F /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		738DC70927B68F9D003B1F6F /* Detail_Map_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail_Map_View.swift; sourceTree = "<group>"; };
-		738DC70B27B6988A003B1F6F /* WebView_For_URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView_For_URL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 				738DC70727B675D1003B1F6F /* WebView.swift */,
 				26603AF127B575370087591E /* Store_Image.xcassets */,
 				736B3AB427B64AF400DBEAEF /* MapsView.swift */,
-				738DC70B27B6988A003B1F6F /* WebView_For_URL.swift */,
 				738DC70927B68F9D003B1F6F /* Detail_Map_View.swift */,
 				738DC70527B6663A003B1F6F /* PartialSheetViews.swift */,
 			);
@@ -322,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				73029F6227B2BACA000D379E /* ContentView.swift in Sources */,
-				738DC70C27B6988A003B1F6F /* WebView_For_URL.swift in Sources */,
 				738DC70827B675D1003B1F6F /* WebView.swift in Sources */,
 				736B3AB527B64AF400DBEAEF /* MapsView.swift in Sources */,
 				73029F6027B2BACA000D379E /* Japan_ProjectApp.swift in Sources */,
