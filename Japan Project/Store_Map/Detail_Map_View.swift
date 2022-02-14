@@ -36,9 +36,7 @@ struct popUP_Detail: View {
                             Image("Street_View")
                                 .frame(width: 100, height: 100)
                         }
-                        
                     }
-                
                 }
             }.sheet(isPresented: $showWebView) {
                 HStack{
