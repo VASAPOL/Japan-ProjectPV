@@ -89,3 +89,5 @@ struct popUP_Detail_Previews: PreviewProvider {
         popUP_Detail(StoreName_Internal: "A0_Image", StoreImage_Internal: "A0_Image")
     }
 }
+
+//g
