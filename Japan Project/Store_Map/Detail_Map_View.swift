@@ -17,6 +17,7 @@ struct popUP_Detail: View {
                 Spacer()
                 Text(StoreName_Internal)
                     .font(.title)
+                    .multilineTextAlignment(.center)
                     .padding()
                 Spacer()
             }
@@ -27,7 +28,7 @@ struct popUP_Detail: View {
                         .frame(width: 300, height: 200)
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 150, height: 150)
+                            .frame(width: 200, height: 200)
                         Button(action:{
                             //WebView(url: URL(string: StoreURL_Street_View_Pub)!)
                             showWebView.toggle()
@@ -51,7 +52,7 @@ struct popUP_Detail: View {
                         }
                         VStack{
                             Rectangle()
-                                .frame(width: 500, height: 50)
+                                .frame(height: 50)
                             Spacer()
                         }
                         VStack{
@@ -62,8 +63,8 @@ struct popUP_Detail: View {
                                 HStack{
                                     Text("< Back")
                                         .fontWeight(.bold)
-                                        .padding([.top, .leading], 15)//.leading
-                                        .padding([.leading], 35)
+                                        .padding([.top, .leading], 12)//.leading
+                                        .padding([.leading], 10)
                                     Spacer()
                                 }
                                 Spacer()

@@ -9,6 +9,7 @@
 import SwiftUI
 import MapKit
 import PartialSheet
+import CoreLocation
 
 var StoreName_Pub = ""
 var StoreImage_Pub = ""
@@ -18,10 +19,11 @@ var StoreURL_Street_View_Pub = ""
 
 struct MapsView: View {
     @State private var showHalfSheet = false
+    let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     @Environment(\.colorScheme) var colorScheme
     private enum MapDefaults {
-        static let latitude = 45.872
-        static let longitude = -1.248
+        static let latitude = 13.6960
+        static let longitude = 100.4802
         static let zoom = 0.5
     }
         @State private var region: MKCoordinateRegion = MKCoordinateRegion(
@@ -173,7 +175,6 @@ struct MapsView: View {
                                     Text(item.Store_Name!)
                                         .multilineTextAlignment(.trailing)
                                         //.frame(width: 100, height: 60)
-                                        
                                 }
                             }
                         }
