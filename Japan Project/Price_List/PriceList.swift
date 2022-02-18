@@ -12,6 +12,7 @@ struct PriceList: View {
     let id_geo = [0,1,2]
     let ARRNAME = ["HIHHH","HI","HELLO"]
     let ARRPRICE = ["10","6156","8521"]
+    let ARRGAMEPRICE = ["10","6156","8521"]
     let ARRPICNAME = ["454564565","6156","8521"]
     var body: some View {
         NavigationView{
