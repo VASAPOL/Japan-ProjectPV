@@ -20,7 +20,7 @@ struct PriceList: View {
                 List{
                     DisclosureGroup(content: {
                         ForEach(id_geo1, id: \.self) { (id_D1) in
-                            Price_Spacer_Front_End(Name: ARRNAME1[id_D1],Price: String(ARRGAMEPRICE1[id_D]),Picname: "B"+String(id_D1))
+                            Price_Spacer_Front_End(Name: ARRNAME1[id_D1],Price: String(ARRGAMEPRICE1[id_D1]),Picname: "B"+String(id_D1))
                         }
                     }, label: {
                         HStack{
