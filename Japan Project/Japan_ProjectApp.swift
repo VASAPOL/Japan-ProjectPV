@@ -11,8 +11,9 @@ import SwiftUI
 struct Japan_ProjectApp: App {
     var body: some Scene {
         WindowGroup {
+            SplashView()
             //MapsView()
-            PriceList()
+            //PriceList()
         }
     }
 }

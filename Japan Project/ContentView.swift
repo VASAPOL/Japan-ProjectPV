@@ -13,9 +13,13 @@ let Type_Input = (Input_String as NSString).integerValue
 struct ContentView: View {
     @State var textx: String = "0"
     @State var supply = Int(Type_Input)/10
+    @State private var isShowingPricelistView = false
+    @State private var isShowingMapsView = false
     var body: some View {
         NavigationView{
             VStack{
+                NavigationLink(destination: PriceList().hiddenNavigationBarStyle(), isActive: $isShowingPricelistView) { EmptyView() }
+                NavigationLink(destination: MapsView().hiddenNavigationBarStyle(), isActive: $isShowingMapsView) { EmptyView() }
                 ZStack(alignment: .leading){
                     Rectangle()
                         .frame(width: 500, height: 250)
@@ -27,17 +31,40 @@ struct ContentView: View {
                         .frame(height: 100)
                     HStack{
                         Spacer(minLength:70)
-                        PictureView(picname: "Paper_Image", LableDown: "Paper")
-                            .padding(.horizontal, 2)
-                        PictureView(picname: "Paper_Image", LableDown: "Paper")
-                            .padding(.horizontal, 2)
-                        PictureView(picname: "Paper_Image", LableDown: "Paper")
-                            .padding(.horizontal, 2)
-                        PictureView(picname: "Paper_Image", LableDown: "Paper")
-                            .padding(.horizontal, 2)
+                        HStack{
+                            Button(action:{
+                                self.isShowingPricelistView = true
+                                print("H")
+                            }){
+                                VStack{
+                                    PictureView(picname: "Street_View", LableDown: "Price")
+                                        .padding(.horizontal, 2)
+                                }
+                            }
+                            Button(action:{
+                                self.isShowingMapsView = true
+                                print("H")
+                            }){
+                                PictureView(picname: "Street_View", LableDown: "Maps")
+                                    .padding(.horizontal, 2)
+                            }
+                            
+                            Button(action:{
+                                self.isShowingPricelistView = true
+                            }){
+                                PictureView(picname: "Street_View", LableDown: "Game1")
+                                    .padding(.horizontal, 2)
+                            }
+                            Button(action:{
+                                self.isShowingPricelistView = true
+                            }){
+                                PictureView(picname: "Street_View", LableDown: "Game2")
+                                    .padding(.horizontal, 2)
+                            }
+                        }
                         //PictureView(picname: "Paper_Image", LableDown: "Game")
                         //    .padding(.horizontal, 2)
-                        Spacer(minLength: 70)
+                        Spacer(minLength: 80)
                     }
                 }
                 HStack{
@@ -47,6 +74,7 @@ struct ContentView: View {
                 Spacer()
             }.hiddenNavigationBarStyle()
         }.navigationBarHidden(true)
+            .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -55,26 +83,20 @@ struct PictureView: View{
     var LableDown: String
     var body: some View{
         HStack{
-            Spacer()
-            Button(action:{
-                
-            }){
-                VStack{
-                    Image(picname)
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .cornerRadius(50)
-                        .foregroundColor(Color.blue)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 50)
-                                .stroke(Color.black, lineWidth: 1)
-                        )
-                        Text(LableDown)
-                        .foregroundColor(Color.black)
-                }
-                Spacer()
-                
+            VStack{
+                Image(picname)
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .cornerRadius(50)
+                    .foregroundColor(Color.blue)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 50)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                Text(LableDown)
+                    .foregroundColor(Color.black)
             }
+            
         }
     }
 }

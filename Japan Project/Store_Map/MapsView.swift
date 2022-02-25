@@ -19,6 +19,7 @@ var StoreURL_Street_View_Pub = ""
 
 struct MapsView: View {
     @State private var showHalfSheet = false
+    @State private var isShowingฺBackView = false
     let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     @Environment(\.colorScheme) var colorScheme
     private enum MapDefaults {
@@ -143,7 +144,9 @@ struct MapsView: View {
     ] //No_Street_View
         var body: some View {
             NavigationView{
+                ZStack{
             VStack {
+                NavigationLink(destination: ContentView().hiddenNavigationBarStyle(), isActive: $isShowingฺBackView) { EmptyView() }
                 Map(coordinateRegion: $region,
                         interactionModes: .all,
                         showsUserLocation: true,
@@ -182,9 +185,30 @@ struct MapsView: View {
             }.halfSheet(isPresented: self.$showHalfSheet) {
                 SheetContents()
             }
-            }
-        }
+                    HStack{
+                        VStack{
+                    Button(action: {
+                        self.isShowingฺBackView = true
+                        print("CLICK")
+                    }){
+                                ZStack{                                    RoundedRectangle(cornerRadius: 20)
+                                        .frame(width: 100, height: 50)
+                                        .foregroundColor(.white)
+                                        .opacity(0.5)
+                                    Text("< Back")
+                                }
+                                Spacer()
+                    }
+                            Spacer()
+                            
+                        }.padding(.bottom, 400)
+                            .padding(.leading, 10.0)//.edgesIgnoringSafeArea(.top)
+                        Spacer()
+                    }
+                }
+        }.navigationBarBackButtonHidden(false)
     }
+}
 
 
 
