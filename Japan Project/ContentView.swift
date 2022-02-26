@@ -15,11 +15,13 @@ struct ContentView: View {
     @State var supply = Int(Type_Input)/10
     @State private var isShowingPricelistView = false
     @State private var isShowingMapsView = false
+    @State private var isShowingWebSplashView = false
     var body: some View {
         NavigationView{
             VStack{
                 NavigationLink(destination: PriceList().hiddenNavigationBarStyle(), isActive: $isShowingPricelistView) { EmptyView() }
                 NavigationLink(destination: MapsView().hiddenNavigationBarStyle(), isActive: $isShowingMapsView) { EmptyView() }
+                NavigationLink(destination: WebSplash().hiddenNavigationBarStyle(), isActive: $isShowingWebSplashView) { EmptyView() }
                 ZStack(alignment: .leading){
                     Rectangle()
                         .frame(width: 500, height: 250)
@@ -61,6 +63,12 @@ struct ContentView: View {
                                 PictureView(picname: "Street_View", LableDown: "Game2")
                                     .padding(.horizontal, 2)
                             }
+                            Button(action:{
+                                self.isShowingWebSplashView = true
+                            }){
+                                PictureView(picname: "Street_View", LableDown: "Game3")
+                                    .padding(.horizontal, 2)
+                            }
                         }
                         //PictureView(picname: "Paper_Image", LableDown: "Game")
                         //    .padding(.horizontal, 2)
@@ -98,6 +106,12 @@ struct PictureView: View{
             }
             
         }
+    }
+}
+
+struct WebSplash: View{
+    var body: some View{
+        WebView(url: URL(string: "https://www.youtube.com/watch?v=dQw4w9WgXcQ")!)
     }
 }
 

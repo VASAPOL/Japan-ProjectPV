@@ -41,10 +41,10 @@ struct PriceList: View {
                         }
                     }, label: {
                         HStack{
-                            Image("Test_Images")
+                            Image("Metal_Pic")
                                 .resizable()
                                 .frame(width: 70, height:70)
-                            Text("HI")
+                            Text("Steel")
                         }
                     })
                     DisclosureGroup(content: {
@@ -53,10 +53,10 @@ struct PriceList: View {
                         }
                     }, label: {
                         HStack{
-                            Image("Test_Images")
+                            Image("Paper_Pic")
                                 .resizable()
                                 .frame(width: 70, height:70)
-                            Text("HI")
+                            Text("Paper")
                         }
                     })
                     DisclosureGroup(content: {
@@ -65,10 +65,10 @@ struct PriceList: View {
                         }
                     }, label: {
                         HStack{
-                            Image("Test_Images")
+                            Image("Glass_Pic")
                                 .resizable()
                                 .frame(width: 70, height:70)
-                            Text("HI")
+                            Text("Glass")
                         }
                     })
                     DisclosureGroup(content: {
@@ -77,10 +77,10 @@ struct PriceList: View {
                         }
                     }, label: {
                         HStack{
-                            Image("Test_Images")
+                            Image("Plastic_Pic")
                                 .resizable()
                                 .frame(width: 70, height:70)
-                            Text("HI")
+                            Text("Plastic")
                         }
                     })
                     DisclosureGroup(content: {
@@ -89,10 +89,10 @@ struct PriceList: View {
                         }
                     }, label: {
                         HStack{
-                            Image("Test_Images")
+                            Image("FerousMetal_Pic")
                                 .resizable()
                                 .frame(width: 70, height:70)
-                            Text("HI")
+                            Text("Ferous Metal")
                         }
                     })
                     DisclosureGroup(content: {
@@ -101,10 +101,10 @@ struct PriceList: View {
                         }
                     }, label: {
                         HStack{
-                            Image("Test_Images")
+                            Image("Computer_Pic")
                                 .resizable()
                                 .frame(width: 70, height:70)
-                            Text("HI")
+                            Text("E-Waste")
                         }
                     })
                     DisclosureGroup(content: {
@@ -113,14 +113,14 @@ struct PriceList: View {
                         }
                     }, label: {
                         HStack{
-                            Image("Test_Images")
+                            Image("Others_Pic")
                                 .resizable()
                                 .frame(width: 70, height:70)
-                            Text("HI")
+                            Text("Others")
                         }
                     })
                 }
-                .navigationTitle("D")
+                .navigationTitle("Trash Price")
             }
         }
             .ignoresSafeArea()
