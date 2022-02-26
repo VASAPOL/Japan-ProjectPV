@@ -22,26 +22,25 @@ struct ContentView: View {
                 NavigationLink(destination: PriceList().hiddenNavigationBarStyle(), isActive: $isShowingPricelistView) { EmptyView() }
                 NavigationLink(destination: MapsView().hiddenNavigationBarStyle(), isActive: $isShowingMapsView) { EmptyView() }
                 NavigationLink(destination: WebSplash().hiddenNavigationBarStyle(), isActive: $isShowingWebSplashView) { EmptyView() }
-                ZStack(alignment: .leading){
+                ZStack(){
                     Rectangle()
-                        .frame(width: 500, height: 250)
+                        .frame( height: 250)
                         .foregroundColor(.blue)
                         .ignoresSafeArea()
                     RoundedRectangle(cornerRadius: 20)
-                        .padding(.horizontal, 60.0)
+                        .padding(.horizontal, 30)
                         .foregroundColor(.white)
-                        .frame(height: 100)
+                        .frame(height: 120)
                     HStack{
-                        Spacer(minLength:70)
                         HStack{
+                            Spacer(minLength: 40)
                             Button(action:{
                                 self.isShowingPricelistView = true
                                 print("H")
                             }){
-                                VStack{
-                                    PictureView(picname: "Street_View", LableDown: "Price")
-                                        .padding(.horizontal, 2)
-                                }
+                                PictureView(picname: "Street_View", LableDown: "Price")
+                                    .padding(.horizontal, 2)
+                                Spacer()
                             }
                             Button(action:{
                                 self.isShowingMapsView = true
@@ -49,6 +48,7 @@ struct ContentView: View {
                             }){
                                 PictureView(picname: "Street_View", LableDown: "Maps")
                                     .padding(.horizontal, 2)
+                                Spacer()
                             }
                             
                             Button(action:{
@@ -56,33 +56,28 @@ struct ContentView: View {
                             }){
                                 PictureView(picname: "Street_View", LableDown: "Game1")
                                     .padding(.horizontal, 2)
+                                Spacer()
                             }
                             Button(action:{
                                 self.isShowingPricelistView = true
                             }){
                                 PictureView(picname: "Street_View", LableDown: "Game2")
                                     .padding(.horizontal, 2)
+                                
                             }
-                            Button(action:{
-                                self.isShowingWebSplashView = true
-                            }){
-                                PictureView(picname: "Street_View", LableDown: "Game3")
-                                    .padding(.horizontal, 2)
-                            }
+                            Spacer(minLength: 40)
                         }
                         //PictureView(picname: "Paper_Image", LableDown: "Game")
                         //    .padding(.horizontal, 2)
-                        Spacer(minLength: 80)
                     }
                 }
                 HStack{
                     boxView()
                     boxView()
                 }
-                Spacer()
             }.hiddenNavigationBarStyle()
         }.navigationBarHidden(true)
-            .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -133,6 +128,6 @@ struct boxView: View{
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewDevice("iPhone 13")
+            .previewDevice("iPad Air (4th generation)")
     }
 }

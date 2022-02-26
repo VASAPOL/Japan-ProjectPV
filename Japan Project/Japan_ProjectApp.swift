@@ -12,6 +12,7 @@ struct Japan_ProjectApp: App {
     var body: some Scene {
         WindowGroup {
             SplashView()
+                .navigationViewStyle(StackNavigationViewStyle())
             //MapsView()
             //PriceList()
         }
