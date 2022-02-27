@@ -9,10 +9,15 @@ import SwiftUI
 
 @main
 struct Japan_ProjectApp: App {
+    @StateObject var userAuth: UserAuthModel =  UserAuthModel()
     var body: some Scene {
         WindowGroup {
-            SplashView()
-                .navigationViewStyle(StackNavigationViewStyle())
+            NavigationView{
+                SplashView()
+            }.environmentObject(userAuth)
+            .navigationViewStyle(.stack)
+            //SplashView()
+            //    .navigationViewStyle(StackNavigationViewStyle())
             //MapsView()
             //PriceList()
         }

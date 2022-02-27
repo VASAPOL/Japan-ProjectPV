@@ -33,6 +33,12 @@
 		73B3162B27BA6536003F0563 /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B3162A27BA6536003F0563 /* SwiftTest.swift */; };
 		73B3162D27BA6875003F0563 /* Start_Game_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B3162C27BA6875003F0563 /* Start_Game_Screen.swift */; };
 		73BE144427CA8D40007665B6 /* Splash screen.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73BE144327CA8D40007665B6 /* Splash screen.xcassets */; };
+		73CFEC2927CAD1F20022757D /* InfoGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CFEC2827CAD1F20022757D /* InfoGraphics.swift */; };
+		73CFEC2B27CAD20A0022757D /* Infographics_images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CFEC2A27CAD20A0022757D /* Infographics_images.xcassets */; };
+		73CFEC6127CADAED0022757D /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CFEC6027CADAED0022757D /* UserAuthModel.swift */; };
+		73CFEC6427CADB6D0022757D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 73CFEC6327CADB6D0022757D /* GoogleSignIn */; };
+		73CFEC6627CADBE40022757D /* SiginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CFEC6527CADBE40022757D /* SiginView.swift */; };
+		73CFEC6827CADD3F0022757D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73CFEC6727CADD3F0022757D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +88,12 @@
 		73B3162A27BA6536003F0563 /* SwiftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTest.swift; sourceTree = "<group>"; };
 		73B3162C27BA6875003F0563 /* Start_Game_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start_Game_Screen.swift; sourceTree = "<group>"; };
 		73BE144327CA8D40007665B6 /* Splash screen.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Splash screen.xcassets"; sourceTree = "<group>"; };
+		73CFEC2827CAD1F20022757D /* InfoGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoGraphics.swift; sourceTree = "<group>"; };
+		73CFEC2A27CAD20A0022757D /* Infographics_images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Infographics_images.xcassets; sourceTree = "<group>"; };
+		73CFEC6027CADAED0022757D /* UserAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthModel.swift; sourceTree = "<group>"; };
+		73CFEC6527CADBE40022757D /* SiginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginView.swift; sourceTree = "<group>"; };
+		73CFEC6727CADD3F0022757D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73CFEC6927CADD8B0022757D /* Japan-Project-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Japan-Project-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				738DC70427B65849003B1F6F /* PartialSheet in Frameworks */,
+				73CFEC6427CADB6D0022757D /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +158,10 @@
 		73029F5E27B2BACA000D379E /* Japan Project */ = {
 			isa = PBXGroup;
 			children = (
+				73CFEC6927CADD8B0022757D /* Japan-Project-Info.plist */,
+				73CFEC6727CADD3F0022757D /* GoogleService-Info.plist */,
+				73CFEC5F27CADAD40022757D /* GoogleAuth */,
+				73CFEC2727CAD1D60022757D /* Infographics */,
 				7361437927BE5B25001E562C /* Price_List */,
 				7331DA6E27C8088E008AC222 /* SplashScreen */,
 				73029F8927B2BC1C000D379E /* Japan Project.entitlements */,
@@ -225,6 +242,24 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		73CFEC2727CAD1D60022757D /* Infographics */ = {
+			isa = PBXGroup;
+			children = (
+				73CFEC2827CAD1F20022757D /* InfoGraphics.swift */,
+				73CFEC2A27CAD20A0022757D /* Infographics_images.xcassets */,
+			);
+			path = Infographics;
+			sourceTree = "<group>";
+		};
+		73CFEC5F27CADAD40022757D /* GoogleAuth */ = {
+			isa = PBXGroup;
+			children = (
+				73CFEC6027CADAED0022757D /* UserAuthModel.swift */,
+				73CFEC6527CADBE40022757D /* SiginView.swift */,
+			);
+			path = GoogleAuth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,6 +278,7 @@
 			name = "Japan Project";
 			packageProductDependencies = (
 				738DC70327B65849003B1F6F /* PartialSheet */,
+				73CFEC6327CADB6D0022757D /* GoogleSignIn */,
 			);
 			productName = "Japan Project";
 			productReference = 73029F5C27B2BACA000D379E /* RISE.app */;
@@ -318,6 +354,7 @@
 			mainGroup = 73029F5327B2BACA000D379E;
 			packageReferences = (
 				738DC70227B65849003B1F6F /* XCRemoteSwiftPackageReference "PartialSheet" */,
+				73CFEC6227CADB6C0022757D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 73029F5D27B2BACA000D379E /* Products */;
 			projectDirPath = "";
@@ -335,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CFEC2B27CAD20A0022757D /* Infographics_images.xcassets in Resources */,
 				26603AF227B575370087591E /* Store_Image.xcassets in Resources */,
 				7378464B27B41C68005A1997 /* Data_Matcher.json in Resources */,
 				738DC71027B6CD8F003B1F6F /* Game_Trash_Image.xcassets in Resources */,
@@ -343,6 +381,7 @@
 				73BE144427CA8D40007665B6 /* Splash screen.xcassets in Resources */,
 				26603AEF27B555830087591E /* GameImage.xcassets in Resources */,
 				7361437D27BE6032001E562C /* Price_List_Catalog.xcassets in Resources */,
+				73CFEC6827CADD3F0022757D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,8 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73CFEC6127CADAED0022757D /* UserAuthModel.swift in Sources */,
 				738DC70E27B6CBC4003B1F6F /* Game_Main.swift in Sources */,
 				7327A4F627BA83E100E33C77 /* Next_Stage.swift in Sources */,
+				73CFEC6627CADBE40022757D /* SiginView.swift in Sources */,
 				73029F6227B2BACA000D379E /* ContentView.swift in Sources */,
 				738DC70827B675D1003B1F6F /* WebView.swift in Sources */,
 				736B3AB527B64AF400DBEAEF /* MapsView.swift in Sources */,
@@ -377,6 +418,7 @@
 				73029F6027B2BACA000D379E /* Japan_ProjectApp.swift in Sources */,
 				738DC70A27B68F9D003B1F6F /* Detail_Map_View.swift in Sources */,
 				73B3162B27BA6536003F0563 /* SwiftTest.swift in Sources */,
+				73CFEC2927CAD1F20022757D /* InfoGraphics.swift in Sources */,
 				73B3162D27BA6875003F0563 /* Start_Game_Screen.swift in Sources */,
 				738DC70627B6663B003B1F6F /* PartialSheetViews.swift in Sources */,
 				73029F8B27B37B33000D379E /* View_Modifier.swift in Sources */,
@@ -545,11 +587,12 @@
 				DEVELOPMENT_TEAM = 3LC3M2K977;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Japan-Project-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Show on maps";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -578,11 +621,12 @@
 				DEVELOPMENT_TEAM = 3LC3M2K977;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Japan-Project-Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Show on maps";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -729,6 +773,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		73CFEC6227CADB6C0022757D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -736,6 +788,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 738DC70227B65849003B1F6F /* XCRemoteSwiftPackageReference "PartialSheet" */;
 			productName = PartialSheet;
+		};
+		73CFEC6327CADB6D0022757D /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73CFEC6227CADB6C0022757D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
