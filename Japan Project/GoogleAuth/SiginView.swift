@@ -130,24 +130,35 @@ struct SiginView: View {
                                     
                                 }
                                 Spacer()
+                                Spacer()
                                 Button(action: {
-                                    print(geometry.size.height)
+                                    print(vm.givenName)
+                                    if vm.givenName == "Not Logged In"{
+                                        vm.signIn()
+                                    }else{
+                                        vm.signOut()
+                                    }
                                 }, label: {
                                     ZStack{
                                         RoundedRectangle(cornerRadius: 12)
                                             .padding(.horizontal)
                                             .frame(height: 50)
-                                        Text("Sign Out")
-                                            .foregroundColor(.white)
+                                        if vm.givenName == "Not Logged In"{
+                                            Text("SignIn")
+                                                .foregroundColor(.white)
+                                        }else{
+                                            Text("Sign Out")
+                                                .foregroundColor(.white)
+                                        }
+                                       
                                     }
                                 })
                                 
                             }
                         }
+                        Spacer()
                     }
-                    Spacer()
-                    
-                
+                Spacer()
             }
         }//.navigationTitle("Login")
     }

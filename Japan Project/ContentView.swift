@@ -11,11 +11,13 @@ let Input_String = "0"
 let Type_Input = (Input_String as NSString).integerValue
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State var textx: String = "0"
     @State var supply = Int(Type_Input)/10
     @State private var isShowingPricelistView = false
     @State private var isShowingMapsView = false
     @State private var isShowingWebSplashView = false
+    @State private var isShowingSignInView = false
     @State private var isShowingInfo1View = false
     @State private var isShowingInfo2View = false
     @State private var isShowingInfo3View = false
@@ -27,7 +29,8 @@ struct ContentView: View {
                 VStack{
                     NavigationLink(destination: PriceList().hiddenNavigationBarStyle(), isActive: $isShowingPricelistView) { EmptyView() }
                     NavigationLink(destination: MapsView().hiddenNavigationBarStyle(), isActive: $isShowingMapsView) { EmptyView() }
-                    NavigationLink(destination: WebSplash().hiddenNavigationBarStyle(), isActive: $isShowingWebSplashView) { EmptyView() }
+                    NavigationLink(destination: WebSplash().hiddenNavigationBarStyle(), isActive: $isShowingWebSplashView) { EmptyView() }//SiginView
+                    NavigationLink(destination: SiginView().hiddenNavigationBarStyle(), isActive: $isShowingSignInView) { EmptyView() }//SiginView
                     NavigationLink(destination: InfoView(image_name: "Spoon", image_name_bk: "Spoon_BK", toppic_name: "Plastic Spoon and fork", image_height: 600).hiddenNavigationBarStyle(), isActive: $isShowingInfo1View) { EmptyView() }
                     NavigationLink(destination: InfoView(image_name: "Beige_Collage_Scrapbook_Timeline_Infographic", image_name_bk: "Beige_Collage_Scrapbook_Timeline_Infographic_BK", toppic_name: "Plastic Box", image_height: 1000).hiddenNavigationBarStyle(), isActive: $isShowingInfo2View) { EmptyView() }
                     NavigationLink(destination: InfoView(image_name: "PlasticBag", image_name_bk: "PlasticBag_BK", toppic_name: "Plastic Bag", image_height: 1000).hiddenNavigationBarStyle(), isActive: $isShowingInfo3View) { EmptyView() }
@@ -41,20 +44,35 @@ struct ContentView: View {
                         VStack{
                             HStack{
                                 Spacer()
-                                AsyncImage(url: URL(string: vm.profilePicUrl)){ phase in
-                                    switch phase {
-                                    case .success(let image):
-                                        image.resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                    case .failure:
+                                    .padding(.top, 50.0)
+                                Button(action: {
+                                    self.isShowingSignInView = true
+                                }, label: {
+                                    if vm.givenName == "Not Logged In"{
                                         Image(systemName: "photo")
-                                    case .empty:
-                                        Image(systemName: "photo")
-                                    @unknown default:
-                                        Image(systemName: "photo")
+                                            .resizable()
+                                            .foregroundColor(.black)
+                                            .frame(width: 50, height: 50)
+                                    }else{
+                                        AsyncImage(url: URL(string: vm.profilePicUrl)){ phase in
+                                            switch phase {
+                                            case .success(let image):
+                                                image.resizable()
+                                                image.frame(width: 70, height: 70)
+                                                image.foregroundColor(.blue)
+                                                image.clipShape(Circle())
+                                            case .failure:
+                                                Image(systemName: "photo")
+                                            case .empty:
+                                                Image(systemName: "photo")
+                                            @unknown default:
+                                                Image(systemName: "photo")
+                                                    .frame(width: 70, height: 70)
+                                                    .clipShape(Circle())
+                                            }
+                                        }
                                     }
-                                    
-                                }
+                                })
                                 .frame(width: 70, height: 70)
                                 .foregroundColor(.blue)
                                 .clipShape(Circle())
@@ -114,12 +132,12 @@ struct ContentView: View {
                                 self.isShowingInfo1View = true
                             }){
                                 
-                                boxView(picna :"pls bag",picna_BK: "pls bag_bk",geo_so: geometry.size.width)
+                                boxView(picna :"pls_bag",picna_BK: "pls_bag_bk",geo_so: geometry.size.width, theme: colorScheme)
                             }
                             Button(action:{
                                 self.isShowingInfo2View = true
                             }){
-                                boxView(picna :"pls bottle",picna_BK: "pls bottle_bk",geo_so: geometry.size.width)
+                                boxView(picna :"pls_bottle",picna_BK: "pls_bottle_bk",geo_so: geometry.size.width, theme: colorScheme)
                                 
                             }
                             Spacer()
@@ -128,17 +146,18 @@ struct ContentView: View {
                             Button(action:{
                                 self.isShowingInfo3View = true
                             }){
-                                boxView(picna :"pls box",picna_BK: "pls box_bk",geo_so: geometry.size.width)
+                                boxView(picna :"pls_box",picna_BK: "pls_box_bk",geo_so: geometry.size.width, theme: colorScheme)
                             }
                             Button(action:{
                                 self.isShowingInfo4View = true
                             }){
-                                boxView(picna :"pls sp&f",picna_BK: "pls sp&f_bk",geo_so: geometry.size.width)
+                                boxView(picna :"pls_sp&f",picna_BK: "pls_sp&f_bk",geo_so: geometry.size.width, theme: colorScheme)
                             }
                             Spacer()
                         }
+                        VStack{Spacer()}
                     }
-                    Spacer()
+                   //Spacer()
                 }.hiddenNavigationBarStyle()
                     .ignoresSafeArea()
             }.navigationBarHidden(true)
@@ -181,16 +200,34 @@ struct boxView: View{
     var picna: String
     var picna_BK: String
     var geo_so: CGFloat
+    var theme: ColorScheme
     var body: some View{
         VStack{
-            Image(picna)
-                .resizable()
-                .padding(.horizontal, 5)
-                .frame(height: geo_so/2)
-                .foregroundColor(.black)
-                .frame(height: 200)
-                .ignoresSafeArea()
-            Spacer()
+            if (theme == .dark){
+                Image(picna_BK)
+                    .resizable()
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.gray, lineWidth: 4))
+                    .cornerRadius(10)
+                    .padding(.all, 5)
+                    .frame(height: geo_so/2)
+                    .foregroundColor(.black)
+                    //.frame(height: 200)
+                    .ignoresSafeArea()
+            }else{
+                Image(picna)
+                    .resizable()
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.gray, lineWidth: 4))
+                    .cornerRadius(10)
+                    .padding(.all, 5)
+                    .frame(height: geo_so/2)
+                    .foregroundColor(.black)
+                    //.frame(height: 200)
+                    .ignoresSafeArea()
+            }
+            
+            //Spacer()
         }
     }
 }
