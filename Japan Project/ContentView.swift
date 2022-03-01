@@ -18,6 +18,8 @@ struct ContentView: View {
     @State private var isShowingWebSplashView = false
     @State private var isShowingInfo1View = false
     @State private var isShowingInfo2View = false
+    @State private var isShowingInfo3View = false
+    @State private var isShowingInfo4View = false
     @EnvironmentObject var vm: UserAuthModel
     var body: some View {
         GeometryReader { geometry in
@@ -26,8 +28,10 @@ struct ContentView: View {
                     NavigationLink(destination: PriceList().hiddenNavigationBarStyle(), isActive: $isShowingPricelistView) { EmptyView() }
                     NavigationLink(destination: MapsView().hiddenNavigationBarStyle(), isActive: $isShowingMapsView) { EmptyView() }
                     NavigationLink(destination: WebSplash().hiddenNavigationBarStyle(), isActive: $isShowingWebSplashView) { EmptyView() }
-                    NavigationLink(destination: InfoGraphics1().hiddenNavigationBarStyle(), isActive: $isShowingInfo1View) { EmptyView() }
-                    NavigationLink(destination: InfoGraphics2().hiddenNavigationBarStyle(), isActive: $isShowingInfo2View) { EmptyView() }
+                    NavigationLink(destination: InfoView(image_name: "Spoon", image_name_bk: "Spoon_BK", toppic_name: "Plastic Spoon and fork", image_height: 600).hiddenNavigationBarStyle(), isActive: $isShowingInfo1View) { EmptyView() }
+                    NavigationLink(destination: InfoView(image_name: "Beige_Collage_Scrapbook_Timeline_Infographic", image_name_bk: "Beige_Collage_Scrapbook_Timeline_Infographic_BK", toppic_name: "Plastic Box", image_height: 1000).hiddenNavigationBarStyle(), isActive: $isShowingInfo2View) { EmptyView() }
+                    NavigationLink(destination: InfoView(image_name: "PlasticBag", image_name_bk: "PlasticBag_BK", toppic_name: "Plastic Bag", image_height: 1000).hiddenNavigationBarStyle(), isActive: $isShowingInfo3View) { EmptyView() }
+                    NavigationLink(destination: InfoView(image_name: "PlasticBottle", image_name_bk: "PlasticBottle_BK", toppic_name: "Plastic Bottle", image_height: 1000).hiddenNavigationBarStyle(), isActive: $isShowingInfo4View) { EmptyView() }
                     
                     ZStack(){
                         Rectangle()
@@ -109,42 +113,27 @@ struct ContentView: View {
                             Button(action:{
                                 self.isShowingInfo1View = true
                             }){
-                                RoundedRectangle(cornerRadius: 20)
-                                    .padding(.horizontal, 5)
-                                    .foregroundColor(.black)
-                                    .frame(height: geometry.size.width/2)
-                                    .ignoresSafeArea()
+                                
+                                boxView(picna :"pls bag",picna_BK: "pls bag_bk",geo_so: geometry.size.width)
                             }
                             Button(action:{
                                 self.isShowingInfo2View = true
                             }){
-                                RoundedRectangle(cornerRadius: 20)
-                                    .padding(.horizontal, 5)
-                                    .foregroundColor(.black)
-                                    .frame(height: geometry.size.width/2)
-                                    .ignoresSafeArea()
+                                boxView(picna :"pls bottle",picna_BK: "pls bottle_bk",geo_so: geometry.size.width)
                                 
                             }
                             Spacer()
                         }
                         HStack{
                             Button(action:{
-                                self.isShowingInfo1View = true
+                                self.isShowingInfo3View = true
                             }){
-                                RoundedRectangle(cornerRadius: 20)
-                                    .padding(.horizontal, 5)
-                                    .foregroundColor(.black)
-                                    .frame(height: geometry.size.width/2)
-                                    .ignoresSafeArea()
+                                boxView(picna :"pls box",picna_BK: "pls box_bk",geo_so: geometry.size.width)
                             }
                             Button(action:{
-                                self.isShowingInfo2View = true
+                                self.isShowingInfo4View = true
                             }){
-                                RoundedRectangle(cornerRadius: 20)
-                                    .padding(.horizontal, 5)
-                                    .foregroundColor(.black)
-                                    .frame(height: geometry.size.width/2)
-                                    .ignoresSafeArea()
+                                boxView(picna :"pls sp&f",picna_BK: "pls sp&f_bk",geo_so: geometry.size.width)
                             }
                             Spacer()
                         }
@@ -189,10 +178,15 @@ struct WebSplash: View{
 }
 
 struct boxView: View{
+    var picna: String
+    var picna_BK: String
+    var geo_so: CGFloat
     var body: some View{
         VStack{
-            RoundedRectangle(cornerRadius: 20)
+            Image(picna)
+                .resizable()
                 .padding(.horizontal, 5)
+                .frame(height: geo_so/2)
                 .foregroundColor(.black)
                 .frame(height: 200)
                 .ignoresSafeArea()

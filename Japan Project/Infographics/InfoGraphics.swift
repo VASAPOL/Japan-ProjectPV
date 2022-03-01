@@ -39,19 +39,30 @@ struct InfoGraphics1: View {
 }
 
 
-struct InfoGraphics2: View {
+struct InfoView:View{
+    let image_name: String
+    let image_name_bk: String
+    let toppic_name:String
+    let image_height: CGFloat
     @Environment(\.presentationMode) var presentationMode
-    var body: some View {
+    @Environment(\.colorScheme) var colorScheme
+    var body: some View{
         NavigationView{
             VStack{
                 GeometryReader{ geometry in
                     HStack{
                         Spacer()
                         ScrollView{
-                            Image("Spoon")
-                                .resizable()
-                                .frame(width: geometry.size.width-20, height: 600)
-                        }.navigationTitle("Plastic Spoon and fork")
+                            if colorScheme == .dark {
+                                Image(image_name_bk)
+                                    .resizable()
+                                    .frame(width: geometry.size.width-20, height: image_height)
+                            }else{
+                                Image(image_name)
+                                    .resizable()
+                                    .frame(width: geometry.size.width-20, height: image_height)
+                            }
+                        }.navigationTitle(toppic_name)
                         Spacer()
                     }
                 }
@@ -65,10 +76,11 @@ struct InfoGraphics2: View {
                     Text("Back")
                 }
             })
-        }.navigationTitle("Spoon")
-            
+        }.navigationTitle(toppic_name)
     }
 }
+
+
 //Beige_Collage_Scrapbook_Timeline_Infographic
 
 struct InfoGraphics_Previews: PreviewProvider {
