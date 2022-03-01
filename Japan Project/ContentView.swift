@@ -26,15 +26,16 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             NavigationView{
+                ScrollView{
                 VStack{
-                    NavigationLink(destination: PriceList().hiddenNavigationBarStyle(), isActive: $isShowingPricelistView) { EmptyView() }
-                    NavigationLink(destination: MapsView().hiddenNavigationBarStyle(), isActive: $isShowingMapsView) { EmptyView() }
-                    NavigationLink(destination: WebSplash().hiddenNavigationBarStyle(), isActive: $isShowingWebSplashView) { EmptyView() }//SiginView
-                    NavigationLink(destination: SiginView().hiddenNavigationBarStyle(), isActive: $isShowingSignInView) { EmptyView() }//SiginView
-                    NavigationLink(destination: InfoView(image_name: "Spoon", image_name_bk: "Spoon_BK", toppic_name: "Plastic Spoon and fork", image_height: 600).hiddenNavigationBarStyle(), isActive: $isShowingInfo1View) { EmptyView() }
-                    NavigationLink(destination: InfoView(image_name: "Beige_Collage_Scrapbook_Timeline_Infographic", image_name_bk: "Beige_Collage_Scrapbook_Timeline_Infographic_BK", toppic_name: "Plastic Box", image_height: 1000).hiddenNavigationBarStyle(), isActive: $isShowingInfo2View) { EmptyView() }
-                    NavigationLink(destination: InfoView(image_name: "PlasticBag", image_name_bk: "PlasticBag_BK", toppic_name: "Plastic Bag", image_height: 1000).hiddenNavigationBarStyle(), isActive: $isShowingInfo3View) { EmptyView() }
-                    NavigationLink(destination: InfoView(image_name: "PlasticBottle", image_name_bk: "PlasticBottle_BK", toppic_name: "Plastic Bottle", image_height: 1000).hiddenNavigationBarStyle(), isActive: $isShowingInfo4View) { EmptyView() }
+                    NavigationLink(destination: PriceList().navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingPricelistView) { EmptyView() }
+                    NavigationLink(destination: MapsView().navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingMapsView) { EmptyView() }
+                    NavigationLink(destination: WebSplash().navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingWebSplashView) { EmptyView() }//SiginView
+                    NavigationLink(destination: SiginView().navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingSignInView) { EmptyView() }//SiginView
+                    NavigationLink(destination: InfoView(image_name: "Spoon", image_name_bk: "Spoon_BK", toppic_name: "Plastic Spoon and fork", image_height: geometry.size.height*2.3).navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingInfo1View) { EmptyView() }
+                    NavigationLink(destination: InfoView(image_name: "Beige_Collage_Scrapbook_Timeline_Infographic", image_name_bk: "Beige_Collage_Scrapbook_Timeline_Infographic_BK", toppic_name: "Plastic Box", image_height: geometry.size.height*4).navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingInfo2View) { EmptyView() }
+                    NavigationLink(destination: InfoView(image_name: "PlasticBag", image_name_bk: "PlasticBag_BK", toppic_name: "Plastic Bag", image_height: geometry.size.height*4).navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingInfo3View) { EmptyView() }
+                    NavigationLink(destination: InfoView(image_name: "PlasticBottle", image_name_bk: "PlasticBottle_BK", toppic_name: "Plastic Bottle", image_height: geometry.size.height*4).navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingInfo4View) { EmptyView() }
                     
                     ZStack(){
                         Rectangle()
@@ -90,7 +91,7 @@ struct ContentView: View {
                                             self.isShowingPricelistView = true
                                             print("H")
                                         }){
-                                            PictureView(picname: "Street_View", LableDown: "Price")
+                                            PictureView(picname: "Price_Logo", LableDown: "Price")
                                                 .padding(.horizontal, 2)
                                             Spacer()
                                         }
@@ -98,7 +99,7 @@ struct ContentView: View {
                                             self.isShowingMapsView = true
                                             print("H")
                                         }){
-                                            PictureView(picname: "Street_View", LableDown: "Maps")
+                                            PictureView(picname: "Maps_Logo", LableDown: "Maps")
                                                 .padding(.horizontal, 2)
                                             Spacer()
                                         }
@@ -113,7 +114,7 @@ struct ContentView: View {
                                         Button(action:{
                                             self.isShowingPricelistView = true
                                         }){
-                                            PictureView(picname: "Street_View", LableDown: "Game2")
+                                            PictureView(picname: "Street_View", LableDown: "Contact Saleng")
                                                 .padding(.horizontal, 2)
                                             
                                         }
@@ -132,12 +133,12 @@ struct ContentView: View {
                                 self.isShowingInfo1View = true
                             }){
                                 
-                                boxView(picna :"pls_bag",picna_BK: "pls_bag_bk",geo_so: geometry.size.width, theme: colorScheme)
+                                boxView(picna :"pls_sp&f",picna_BK: "pls_sp&f_bk",geo_so: geometry.size.width, theme: colorScheme)
                             }
                             Button(action:{
                                 self.isShowingInfo2View = true
                             }){
-                                boxView(picna :"pls_bottle",picna_BK: "pls_bottle_bk",geo_so: geometry.size.width, theme: colorScheme)
+                                boxView(picna :"pls_box",picna_BK: "pls_box_bk",geo_so: geometry.size.width, theme: colorScheme)
                                 
                             }
                             Spacer()
@@ -146,12 +147,12 @@ struct ContentView: View {
                             Button(action:{
                                 self.isShowingInfo3View = true
                             }){
-                                boxView(picna :"pls_box",picna_BK: "pls_box_bk",geo_so: geometry.size.width, theme: colorScheme)
+                                boxView(picna :"pls_bag",picna_BK: "pls_bag_bk",geo_so: geometry.size.width, theme: colorScheme)
                             }
                             Button(action:{
                                 self.isShowingInfo4View = true
                             }){
-                                boxView(picna :"pls_sp&f",picna_BK: "pls_sp&f_bk",geo_so: geometry.size.width, theme: colorScheme)
+                                boxView(picna :"pls_bottle",picna_BK: "pls_bottle_bk",geo_so: geometry.size.width, theme: colorScheme)
                             }
                             Spacer()
                         }
@@ -160,9 +161,10 @@ struct ContentView: View {
                    //Spacer()
                 }.hiddenNavigationBarStyle()
                     .ignoresSafeArea()
+                }.hiddenNavigationBarStyle()
+                    .ignoresSafeArea()
             }.navigationBarHidden(true)
                 .navigationViewStyle(StackNavigationViewStyle())
-            
         }
     }
 }

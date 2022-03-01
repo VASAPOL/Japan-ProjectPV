@@ -30,6 +30,7 @@
 		738DC70A27B68F9D003B1F6F /* Detail_Map_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DC70927B68F9D003B1F6F /* Detail_Map_View.swift */; };
 		738DC70E27B6CBC4003B1F6F /* Game_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DC70D27B6CBC4003B1F6F /* Game_Main.swift */; };
 		738DC71027B6CD8F003B1F6F /* Game_Trash_Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738DC70F27B6CD8E003B1F6F /* Game_Trash_Image.xcassets */; };
+		73A301F527CDFBE0008CEFB1 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A301F427CDFBE0008CEFB1 /* KeyboardReadable.swift */; };
 		73B3162B27BA6536003F0563 /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B3162A27BA6536003F0563 /* SwiftTest.swift */; };
 		73B3162D27BA6875003F0563 /* Start_Game_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B3162C27BA6875003F0563 /* Start_Game_Screen.swift */; };
 		73BE144427CA8D40007665B6 /* Splash screen.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73BE144327CA8D40007665B6 /* Splash screen.xcassets */; };
@@ -85,6 +86,7 @@
 		738DC70927B68F9D003B1F6F /* Detail_Map_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail_Map_View.swift; sourceTree = "<group>"; };
 		738DC70D27B6CBC4003B1F6F /* Game_Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Main.swift; sourceTree = "<group>"; };
 		738DC70F27B6CD8E003B1F6F /* Game_Trash_Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game_Trash_Image.xcassets; sourceTree = "<group>"; };
+		73A301F427CDFBE0008CEFB1 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		73B3162A27BA6536003F0563 /* SwiftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTest.swift; sourceTree = "<group>"; };
 		73B3162C27BA6875003F0563 /* Start_Game_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start_Game_Screen.swift; sourceTree = "<group>"; };
 		73BE144327CA8D40007665B6 /* Splash screen.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Splash screen.xcassets"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				73CFEC6027CADAED0022757D /* UserAuthModel.swift */,
+				73A301F427CDFBE0008CEFB1 /* KeyboardReadable.swift */,
 				73CFEC6527CADBE40022757D /* SiginView.swift */,
 			);
 			path = GoogleAuth;
@@ -420,6 +423,7 @@
 				73B3162B27BA6536003F0563 /* SwiftTest.swift in Sources */,
 				73CFEC2927CAD1F20022757D /* InfoGraphics.swift in Sources */,
 				73B3162D27BA6875003F0563 /* Start_Game_Screen.swift in Sources */,
+				73A301F527CDFBE0008CEFB1 /* KeyboardReadable.swift in Sources */,
 				738DC70627B6663B003B1F6F /* PartialSheetViews.swift in Sources */,
 				73029F8B27B37B33000D379E /* View_Modifier.swift in Sources */,
 				7361437B27BE5B40001E562C /* PriceList.swift in Sources */,
@@ -582,7 +586,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Japan Project/Japan Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Japan Project/Preview Content\"";
 				DEVELOPMENT_TEAM = 3LC3M2K977;
 				ENABLE_PREVIEWS = YES;
@@ -596,6 +600,8 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,7 +623,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Japan Project/Japan Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"Japan Project/Preview Content\"";
 				DEVELOPMENT_TEAM = 3LC3M2K977;
 				ENABLE_PREVIEWS = YES;
@@ -631,6 +637,8 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

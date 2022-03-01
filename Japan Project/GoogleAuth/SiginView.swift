@@ -31,15 +31,12 @@ struct SiginView: View {
         AsyncImage(url: URL(string: vm.profilePicUrl))
             .frame(width: 100, height: 100)
     }
-    
-    fileprivate func UserInfo() -> Text {
-        return Text(vm.givenName)
-    }
     @State private var username: String = ""
     var frameworks = ["User", "Saleng"]
     @State private var PickerName = "Yuki"
     @State private var selectedFrameworkIndex = 0
     @State private var SalengOrNot = 0
+    @FocusState private var isTextFieldFocused: Bool
     var body: some View {
         VStack{
             GeometryReader { geometry in
@@ -73,7 +70,19 @@ struct SiginView: View {
                                 }.ignoresSafeArea()
                             }
                             VStack{
-                                Spacer()
+                                if geometry.size.height > 900 {
+                                    if isTextFieldFocused == false{
+                                        Spacer(minLength: geometry.size.height/2)
+                                    }else{
+                                        Spacer(minLength: 150)
+                                    }
+                                }else{
+                                    if isTextFieldFocused == false{
+                                        Spacer(minLength: 150)
+                                    }else{
+                                        Spacer()
+                                    }
+                                }
                                 HStack{
                                     if geometry.size.height > 900{
                                         Text("Name Surname")
@@ -107,6 +116,7 @@ struct SiginView: View {
                                     )
                                         .textFieldStyle(.roundedBorder)
                                         .padding(.horizontal)
+                                        .focused($isTextFieldFocused)
                                     TextField(
                                         "Line iD",
                                         text: $username
@@ -130,9 +140,8 @@ struct SiginView: View {
                                     
                                 }
                                 Spacer()
-                                Spacer()
                                 Button(action: {
-                                    print(vm.givenName)
+                                   print(isTextFieldFocused)
                                     if vm.givenName == "Not Logged In"{
                                         vm.signIn()
                                     }else{
@@ -168,7 +177,14 @@ struct SiginView: View {
 
 struct SiginView_Previews: PreviewProvider {
     static var previews: some View {
-        SiginView()
+        ZStack{
+            SiginView()
+                .previewInterfaceOrientation(.portrait)
+                .previewLayout(.device)
+                .previewDevice("iPhone 13 Pro")
+            
+        }
+            //.environmentObject(_:)
     }
 }
 
@@ -191,3 +207,5 @@ struct SiginView_Previews: PreviewProvider {
  }
  }
  */
+
+//No ObservableObject of type UserAuthModel found. A View.environmentObject(_:) for UserAuthModel may be missing as an ancestor of this view.
