@@ -152,7 +152,9 @@ struct Price_Spacer_Front_End: View {
             Text(Name)
             Spacer()
             Text(Price)
-            Text("฿")
+            Image("Price_Logo")
+                .resizable()
+                .frame(width: 50, height: 70)
         }
     }
 }

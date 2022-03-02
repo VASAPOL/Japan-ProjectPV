@@ -10,6 +10,8 @@ import SwiftUI
 struct popUP_Detail: View {
     let StoreName_Internal: String
     let StoreImage_Internal: String
+    let StoreImage_Internal2: String
+    let Detail: String
     @State private var showWebView = false
     var body: some View{
         VStack{
@@ -76,8 +78,7 @@ struct popUP_Detail: View {
             }
             Divider()
             Spacer()
-            Text("Something to show in this sheet")
-            Text("Whatever you want.")
+            Text(Detail)
             Spacer()
             
         }
@@ -86,8 +87,6 @@ struct popUP_Detail: View {
 
 struct popUP_Detail_Previews: PreviewProvider {
     static var previews: some View {
-        popUP_Detail(StoreName_Internal: "A0_Image", StoreImage_Internal: "A0_Image")
+        popUP_Detail(StoreName_Internal: "A0_Image", StoreImage_Internal: "A0_Image",StoreImage_Internal2: "A0_1_Image",Detail: "JAPAN")
     }
 }
-
-//g

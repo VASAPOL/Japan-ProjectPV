@@ -107,14 +107,14 @@ struct ContentView: View {
                                         Button(action:{
                                             self.isShowingPricelistView = true
                                         }){
-                                            PictureView(picname: "Street_View", LableDown: "Game1")
+                                            PictureView(picname: "Game_Logo", LableDown: "Game1")
                                                 .padding(.horizontal, 2)
                                             Spacer()
                                         }
                                         Button(action:{
                                             self.isShowingPricelistView = true
                                         }){
-                                            PictureView(picname: "Street_View", LableDown: "Contact Saleng")
+                                            PictureView(picname: "Saleng_Pic", LableDown: "Saleng")
                                                 .padding(.horizontal, 2)
                                             
                                         }
