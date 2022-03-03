@@ -9,11 +9,13 @@ import SwiftUI
 
 @main
 struct Japan_ProjectApp: App {
+    
     @StateObject var userAuth: UserAuthModel =  UserAuthModel()
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                SplashView()
+                //SplashView()
+                Contact_Saleng_View()
                 //SiginView()
             }.environmentObject(userAuth)
             .navigationViewStyle(.stack)

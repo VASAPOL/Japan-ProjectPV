@@ -176,15 +176,82 @@ struct SiginView: View {
     }
 }
 
+struct backUp_Ui: View{
+    //var storageManager = StorageManager()
+    @State private var image = UIImage()
+    @State private var showSheet = false
+    @State private var showingOptions = false
+    @State private var showSheetPhoto = false
+    
+    //let storage = storageManager.app().storage("gs://rise-c9522.appspot.com");
+    //let storageRef = await storage.ref();
+    var body: some View {
+        VStack{
+                HStack {
+                    VStack{
+                        Image(uiImage: self.image)
+                            .resizable()
+                            .cornerRadius(50)
+                            .frame(width: 100, height: 100)
+                            .background(Color.black.opacity(0.2))
+                            .aspectRatio(contentMode: .fill)
+                            .clipShape(Circle())
+                    }
+                    /*
+                    
+                    
+                    Text("Change photo")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
+                        .background(.blue)
+                        .cornerRadius(16)
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 20)
+                        .onTapGesture {
+                            showingOptions = true
+                        }
+                         */
+                }
+                .padding(.horizontal, 20)
+                .sheet(isPresented: $showSheet) {
+                    ImagePicker(sourceType: .camera, selectedImage: self.$image)
+                }
+                .sheet(isPresented: $showSheetPhoto) {
+                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+                }
+                .confirmationDialog("Select a picture input", isPresented: $showingOptions, titleVisibility: .visible) {
+                    Button(action: {
+                        self.showSheet = true
+                    }, label: {
+                        Text("Camera")
+                    })
+                    Button(action: {
+                        self.showSheetPhoto = true
+                    }, label: {
+                        Text("Photo Libary")
+                    })
+                }
+                /*
+                 .sheet(isPresented: $showSheet) {
+                 // Pick an image from the photo library:
+                 ImagePicker(sourceType: .camera, selectedImage: self.$image)
+                 }
+                 */
+            }
+        
+    }
+}
+
 
 
 struct SiginView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
-            SiginView()
-                .previewInterfaceOrientation(.portrait)
-                .previewLayout(.device)
-                .previewDevice("iPhone 13 Pro")
+            backUp_Ui()
+                //.previewInterfaceOrientation(.portrait)
+                //.previewLayout(.device)
+                //.previewDevice("iPhone 13 Pro")
             
         }
             //.environmentObject(_:)
