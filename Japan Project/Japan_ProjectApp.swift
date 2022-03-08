@@ -14,8 +14,8 @@ struct Japan_ProjectApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                //SplashView()
-                Contact_Saleng_View()
+                SplashView()
+                //backUp_Ui()
                 //SiginView()
             }.environmentObject(userAuth)
             .navigationViewStyle(.stack)

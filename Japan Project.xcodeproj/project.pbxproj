@@ -46,6 +46,8 @@
 		738DC70A27B68F9D003B1F6F /* Detail_Map_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DC70927B68F9D003B1F6F /* Detail_Map_View.swift */; };
 		738DC70E27B6CBC4003B1F6F /* Game_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738DC70D27B6CBC4003B1F6F /* Game_Main.swift */; };
 		738DC71027B6CD8F003B1F6F /* Game_Trash_Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738DC70F27B6CD8E003B1F6F /* Game_Trash_Image.xcassets */; };
+		739703C127D7E4AF00B0D9DD /* GoogleAuthPic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739703C027D7E4AF00B0D9DD /* GoogleAuthPic.xcassets */; };
+		739703C327D7F47800B0D9DD /* LoopingPlayer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739703C227D7F47700B0D9DD /* LoopingPlayer2.swift */; };
 		73A301F527CDFBE0008CEFB1 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A301F427CDFBE0008CEFB1 /* KeyboardReadable.swift */; };
 		73B3162B27BA6536003F0563 /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B3162A27BA6536003F0563 /* SwiftTest.swift */; };
 		73B3162D27BA6875003F0563 /* Start_Game_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B3162C27BA6875003F0563 /* Start_Game_Screen.swift */; };
@@ -56,6 +58,8 @@
 		73CFEC6427CADB6D0022757D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 73CFEC6327CADB6D0022757D /* GoogleSignIn */; };
 		73CFEC6627CADBE40022757D /* SiginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CFEC6527CADBE40022757D /* SiginView.swift */; };
 		73CFEC6827CADD3F0022757D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73CFEC6727CADD3F0022757D /* GoogleService-Info.plist */; };
+		73E5EFAC27D7B93A00467F44 /* LoopingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5EFAB27D7B93A00467F44 /* LoopingPlayer.swift */; };
+		73E5EFAF27D7BA6100467F44 /* VideoWithBlock.mov in Resources */ = {isa = PBXBuildFile; fileRef = 73E5EFAE27D7BA6100467F44 /* VideoWithBlock.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,8 @@
 		738DC70927B68F9D003B1F6F /* Detail_Map_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail_Map_View.swift; sourceTree = "<group>"; };
 		738DC70D27B6CBC4003B1F6F /* Game_Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Main.swift; sourceTree = "<group>"; };
 		738DC70F27B6CD8E003B1F6F /* Game_Trash_Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game_Trash_Image.xcassets; sourceTree = "<group>"; };
+		739703C027D7E4AF00B0D9DD /* GoogleAuthPic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GoogleAuthPic.xcassets; sourceTree = "<group>"; };
+		739703C227D7F47700B0D9DD /* LoopingPlayer2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingPlayer2.swift; sourceTree = "<group>"; };
 		73A301F427CDFBE0008CEFB1 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		73B3162A27BA6536003F0563 /* SwiftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTest.swift; sourceTree = "<group>"; };
 		73B3162C27BA6875003F0563 /* Start_Game_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start_Game_Screen.swift; sourceTree = "<group>"; };
@@ -115,6 +121,8 @@
 		73CFEC6527CADBE40022757D /* SiginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginView.swift; sourceTree = "<group>"; };
 		73CFEC6727CADD3F0022757D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		73CFEC6927CADD8B0022757D /* Japan-Project-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Japan-Project-Info.plist"; sourceTree = SOURCE_ROOT; };
+		73E5EFAB27D7B93A00467F44 /* LoopingPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingPlayer.swift; sourceTree = "<group>"; };
+		73E5EFAE27D7BA6100467F44 /* VideoWithBlock.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = VideoWithBlock.mov; path = ../../../../../Downloads/VideoWithBlock.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +210,7 @@
 				73029F8927B2BC1C000D379E /* Japan Project.entitlements */,
 				73029F5F27B2BACA000D379E /* Japan_ProjectApp.swift */,
 				73029F6127B2BACA000D379E /* ContentView.swift */,
+				739703C227D7F47700B0D9DD /* LoopingPlayer2.swift */,
 				73029F8A27B37B33000D379E /* View_Modifier.swift */,
 				7378465127B4AB8B005A1997 /* Game */,
 				73029F6327B2BACB000D379E /* Assets.xcassets */,
@@ -239,6 +248,8 @@
 		7331DA6E27C8088E008AC222 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
+				73E5EFAD27D7B9C100467F44 /* Assets */,
+				73E5EFAB27D7B93A00467F44 /* LoopingPlayer.swift */,
 				7331DA6F27C808AB008AC222 /* SpashScreenMain.swift */,
 				73BE144327CA8D40007665B6 /* Splash screen.xcassets */,
 			);
@@ -302,8 +313,17 @@
 				73CFEC6027CADAED0022757D /* UserAuthModel.swift */,
 				73A301F427CDFBE0008CEFB1 /* KeyboardReadable.swift */,
 				73CFEC6527CADBE40022757D /* SiginView.swift */,
+				739703C027D7E4AF00B0D9DD /* GoogleAuthPic.xcassets */,
 			);
 			path = GoogleAuth;
+			sourceTree = "<group>";
+		};
+		73E5EFAD27D7B9C100467F44 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				73E5EFAE27D7BA6100467F44 /* VideoWithBlock.mov */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CFEC2B27CAD20A0022757D /* Infographics_images.xcassets in Resources */,
+				73E5EFAF27D7BA6100467F44 /* VideoWithBlock.mov in Resources */,
 				26603AF227B575370087591E /* Store_Image.xcassets in Resources */,
 				7378464B27B41C68005A1997 /* Data_Matcher.json in Resources */,
 				738DC71027B6CD8F003B1F6F /* Game_Trash_Image.xcassets in Resources */,
@@ -440,6 +461,7 @@
 				73029F6427B2BACB000D379E /* Assets.xcassets in Resources */,
 				73BE144427CA8D40007665B6 /* Splash screen.xcassets in Resources */,
 				26603AEF27B555830087591E /* GameImage.xcassets in Resources */,
+				739703C127D7E4AF00B0D9DD /* GoogleAuthPic.xcassets in Resources */,
 				7361437D27BE6032001E562C /* Price_List_Catalog.xcassets in Resources */,
 				73CFEC6827CADD3F0022757D /* GoogleService-Info.plist in Resources */,
 			);
@@ -480,6 +502,7 @@
 				73029F6027B2BACA000D379E /* Japan_ProjectApp.swift in Sources */,
 				738DC70A27B68F9D003B1F6F /* Detail_Map_View.swift in Sources */,
 				73B3162B27BA6536003F0563 /* SwiftTest.swift in Sources */,
+				739703C327D7F47800B0D9DD /* LoopingPlayer2.swift in Sources */,
 				73CFEC2927CAD1F20022757D /* InfoGraphics.swift in Sources */,
 				73B3162D27BA6875003F0563 /* Start_Game_Screen.swift in Sources */,
 				73A301F527CDFBE0008CEFB1 /* KeyboardReadable.swift in Sources */,
@@ -487,6 +510,7 @@
 				738DC70627B6663B003B1F6F /* PartialSheetViews.swift in Sources */,
 				73029F8B27B37B33000D379E /* View_Modifier.swift in Sources */,
 				7361437B27BE5B40001E562C /* PriceList.swift in Sources */,
+				73E5EFAC27D7B93A00467F44 /* LoopingPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +670,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Japan Project/Japan Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_ASSET_PATHS = "\"Japan Project/Preview Content\"";
 				DEVELOPMENT_TEAM = 3LC3M2K977;
 				ENABLE_PREVIEWS = YES;
@@ -685,7 +709,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Japan Project/Japan Project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_ASSET_PATHS = "\"Japan Project/Preview Content\"";
 				DEVELOPMENT_TEAM = 3LC3M2K977;
 				ENABLE_PREVIEWS = YES;

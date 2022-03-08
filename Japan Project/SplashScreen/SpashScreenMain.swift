@@ -30,13 +30,19 @@ struct SplashView: View {
                                     .resizable()
                                     .frame(width: geo.size.width/5, height: geo.size.width/5)
                                     .scaleEffect(scale)
-                                    .animation(.linear(duration: 3), value: scale)
-                            }else{
-                                Image("Logo_White_Splash")
+                                    .animation(.linear(duration: 60), value: scale)
+                                /*
+                                 Image("Logo_Black_Splash")
                                     .resizable()
                                     .frame(width: geo.size.width/5, height: geo.size.width/5)
                                     .scaleEffect(scale)
                                     .animation(.linear(duration: 3), value: scale)
+                                 */
+                            }else{
+                                
+                                LoopingPlayer()
+                                    .ignoresSafeArea()
+                               
                             }
                             Spacer()
                         }

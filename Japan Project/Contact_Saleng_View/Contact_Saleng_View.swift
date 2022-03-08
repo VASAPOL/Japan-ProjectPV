@@ -31,55 +31,20 @@ struct Contact_Saleng_View: View {
     //let storageRef = await storage.ref();
     var body: some View {
         VStack{
-                HStack {
-                    Image(uiImage: self.image)
-                        .resizable()
-                        .cornerRadius(50)
-                        .frame(width: 100, height: 100)
-                        .background(Color.black.opacity(0.2))
-                        .aspectRatio(contentMode: .fill)
-                        .clipShape(Circle())
-                    
-                    Text("Change photo")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .background(.blue)
-                        .cornerRadius(16)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 20)
-                        .onTapGesture {
-                            showingOptions = true
-                        }
-                }
-                .padding(.horizontal, 20)
-                .sheet(isPresented: $showSheet) {
-                    ImagePicker(sourceType: .camera, selectedImage: self.$image)
-                }
-                .sheet(isPresented: $showSheetPhoto) {
-                    ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
-                }
-                .confirmationDialog("Select a picture input", isPresented: $showingOptions, titleVisibility: .visible) {
-                    Button(action: {
-                        self.showSheet = true
-                    }, label: {
-                        Text("Camera")
-                    })
-                    Button(action: {
-                        self.showSheetPhoto = true
-                    }, label: {
-                        Text("Photo Libary")
-                    })
-                }
-                /*
-                 .sheet(isPresented: $showSheet) {
-                 // Pick an image from the photo library:
-                 ImagePicker(sourceType: .camera, selectedImage: self.$image)
-                 }
-                 */
-            }    }
+            List{
+            }
+        }
+        
+    }
 }
 
+struct Contact_View: View {
+    var body: some View{
+        VStack{
+            Text("HI")
+        }
+    }
+}
 
 struct Contact_Sale: View {
     //FirebaseImage(id: "sdfsdf").resizable()
@@ -94,9 +59,6 @@ struct Contact_Sale: View {
                         Image("Logo_Black_Splash")
                             .clipShape(Circle())
                             .padding(.top, 50.0)
-                        //.padding(.top, 150.0)
-                        //.padding(.leading, 1.0)
-                        //Text("Name Surname")
                         Spacer()
                         
                     }
