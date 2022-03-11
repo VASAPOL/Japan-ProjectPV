@@ -13,12 +13,16 @@ struct Japan_ProjectApp: App {
     @StateObject var userAuth: UserAuthModel =  UserAuthModel()
     var body: some Scene {
         WindowGroup {
+            //Contact_Saleng_View()
+            
             NavigationView{
                 SplashView()
+                
                 //backUp_Ui()
                 //SiginView()
             }.environmentObject(userAuth)
             .navigationViewStyle(.stack)
+            .navigationViewStyle(StackNavigationViewStyle())
             //SplashView()
             //    .navigationViewStyle(StackNavigationViewStyle())
             //MapsView()

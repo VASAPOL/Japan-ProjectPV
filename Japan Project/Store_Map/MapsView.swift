@@ -6,11 +6,14 @@
 //  Created by Vasapol on 11/2/2565 BE.
 //
 
+//Import libary
 import SwiftUI
 import MapKit
 import PartialSheet
 import CoreLocation
 
+
+//Public ตัวแปร
 var StoreName_Pub = ""
 var StoreImage_Pub = ""
 var StoreImage_Pub2 = ""
@@ -19,18 +22,24 @@ var StoreURL_Street_View_Pub = ""
 
 
 struct MapsView: View {
+    //ประกาศตัวแปรเฉพาะใน Code นี้เท่านั้น
     @State private var showHalfSheet = false
     @State private var isShowingฺBackView = false
+    //ประกาศตัวแปร
     let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+    //ส่วนในการตรวจสอบ Theme
     @Environment(\.colorScheme) var colorScheme
+    //ปีะกาศตัว Defaults Location ของแมพ
     private enum MapDefaults {
         static let latitude = 13.6960
         static let longitude = 100.4802
         static let zoom = 0.5
     }
+    //ดึงค่า Defaults Location
     @State private var region: MKCoordinateRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: MapDefaults.latitude, longitude: MapDefaults.longitude),
         span: MKCoordinateSpan(latitudeDelta: MapDefaults.zoom, longitudeDelta: MapDefaults.zoom))
+    //สร้าง Array ในการดึงค่าต่างๆ
     let annotationItems = [
         MyAnnotationItem(
             coordinate: CLLocationCoordinate2D(

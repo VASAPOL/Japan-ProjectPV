@@ -37,7 +37,7 @@ struct ContentView: View {
                         NavigationLink(destination: InfoView(image_name: "Spoon", image_name_bk: "Spoon_BK", toppic_name: "Plastic Spoon and fork", image_height: geometry.size.width*1.5).navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingInfo1View) { EmptyView() }
                         NavigationLink(destination: InfoView(image_name: "Beige_Collage_Scrapbook_Timeline_Infographic", image_name_bk: "Beige_Collage_Scrapbook_Timeline_Infographic_BK", toppic_name: "Plastic Box", image_height: geometry.size.width*2.5).navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingInfo2View) { EmptyView() }
                         NavigationLink(destination: InfoView(image_name: "PlasticBag", image_name_bk: "PlasticBag_BK", toppic_name: "Plastic Bag", image_height: geometry.size.width*2.5).navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingInfo3View) { EmptyView() }
-                        NavigationLink(destination: InfoView(image_name: "PlasticBottle", image_name_bk: "PlasticBottle_BK", toppic_name: "Plastic Bottle", image_height: geometry.size.height*1).navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingInfo4View) { EmptyView() }
+                            NavigationLink(destination: InfoView(image_name: "PlasticBottle", image_name_bk: "PlasticBottle_BK", toppic_name: "Plastic Bottle", image_height: geometry.size.height*1.5).navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingInfo4View) { EmptyView() }
                         NavigationLink(destination: LoopingPlayer2().navigationViewStyle(StackNavigationViewStyle()).hiddenNavigationBarStyle(), isActive: $isShowingCartView) { EmptyView() }
                         }
                         ZStack(){
@@ -121,7 +121,8 @@ struct ContentView: View {
                                             }
                                             
                                             Button(action:{
-                                                self.isShowingPricelistView = true
+                                                self.isShowingCartView = true
+                                                //self.isShowingPricelistView = true
                                             }){
                                                 PictureView(picname: "Saleng_Pic", LableDown: "Saleng", Scalern: false)
                                                     .padding(.horizontal, 2)

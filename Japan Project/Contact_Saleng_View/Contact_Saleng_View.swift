@@ -26,15 +26,38 @@ struct Contact_Saleng_View: View {
     @State private var showSheet = false
     @State private var showingOptions = false
     @State private var showSheetPhoto = false
-    
+    let id_geo6 = [0,1,2,3]
+    let Name = ["Yuki","Japan","Tity","Pol"]
     //let storage = storageManager.app().storage("gs://rise-c9522.appspot.com");
     //let storageRef = await storage.ref();
     var body: some View {
-        VStack{
-            List{
-            }
+        NavigationView{
+            VStack{
+                List{
+                    ForEach(id_geo6, id: \.self) { (id_D6) in
+                        NavigationLink(destination: {
+                            Saleng_List_View()
+                        }, label: {
+                            Text(Name[id_D6])
+                        })
+                        //Price_Spacer_Front_End(Name: ARRV2[id_D6],Price: String(ARRGAMEPRICE2[id_D6]),Picname: "BB"+String(id_D6))
+                    }
+                   
+                }.navigationTitle("Contact Saleng")
+            }//.navigationTitle("Contact Saleng")
         }
-        
+    }
+}
+
+
+struct Saleng_List_View: View {
+    var body: some View{
+        NavigationView{
+            VStack{
+                Text("D")
+                Spacer()
+            }
+        }//.hiddenNavigationBarStyle()
     }
 }
 
@@ -154,7 +177,8 @@ struct Contact_Sale: View {
 }
 struct Contact_Saleng_View_Previews: PreviewProvider {
     static var previews: some View {
-        Contact_Saleng_View()
+        //Contact_Saleng_View()
+        Saleng_List_View()
     }
 }
 
